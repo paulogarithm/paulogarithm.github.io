@@ -1,7 +1,65 @@
-<html>
-  <body>
-    <p>
-      hello
-    </p>
-  </body>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paulogarithm</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <script href=""
+
+  <script>
+    function reveal() {
+      var reveals = document.querySelectorAll(".dynamic");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 0;
+
+        if (elementTop < (windowHeight - elementVisible)) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+  </script>
+
+</head>
+
+<body>
+
+  <div class="first">
+    <div class="mySelf">
+      
+    </div>
+    <div>
+      <h1 class="headText">
+        Paul Parisot
+      </h1>
+    </div>
+  </div>
+
+  <div class="second">
+    <div class="dynamic">
+      <div class="project">
+        Hello
+      </div>
+      <div class="project">
+        Hello
+      </div>
+      <div class="project">
+        Hello
+      </div>
+      <div class="project">
+        Hello
+      </div>
+      <a href="https://www.github.com/paulogarithm" target="_blank">Visit Github</a>
+    </div>
+  </div>
+
+</body>
+
 </html>
