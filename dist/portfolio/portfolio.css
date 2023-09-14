@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Reenie+Beani');
 
-body {
+.global {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+
     font-family: Consolas, monaco, monospace;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
 }
 
 .box {
-    position: absolute;
+    position: relative;
     height: 100%;
-    width: 30%;
+    width: 40%;
     top: 0%;
-    left: 5%;
+    left: 2%;
 
     display: flex;
     flex-direction: column;
@@ -28,7 +37,7 @@ body {
 .box > .back {
     position: relative;
     height: 70%;
-    width: 100%;
+    width: 75%;
     top: 0%;
     left: 0%;
 
@@ -39,15 +48,15 @@ body {
 .box > .front {
     position: relative;
     height: 30%;
-    width: 100%;
-    top: -10%;
+    width: 75%;
+    top: -5%;
     left: 0%;
 
     background-color: #333;
     border: 5px solid black;
 }
 
-.box > .front > .hole {
+.front > .hole {
     position: relative;
     top: 20%;
     left: 0%;
@@ -64,19 +73,23 @@ body {
     transform: rotate(0deg);
 }
 
-/*.hole > p {
-    font-family: 'Reenie Beani', cursive;
-    font-weight: bolder;
-
-    font-size: 1vw;
-    text-align: center;
-}*/
-
-/*.box > .back > .trapezoid {
+.global > .side-display {
     position: relative;
-    border-bottom: 50vw solid black;
-    border-left: 5vw solid transparent;
-    border-right: 5vw solid transparent;
-    height: 10%;
-    width: 100/3%;
-}*/
+    width: 40%;
+    height: 40%;
+}
+
+@media (max-width: 750px) {
+    .global {
+        display: block;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .global > * {
+        position: relative;
+        width: 100%;
+    }
+}
