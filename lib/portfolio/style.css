@@ -114,26 +114,28 @@ header > .front > .hole {
 
 .back > * > .selection {
     position: relative;
-    top: 0%;
-    left: 25%;
+    top: -1575%;
+    left: 65%;
     height: 100%;
     width: 30%;
 
     text-align: center;
     background-color: white;
     border: 2px solid black;
-    margin: 1%;
+    bottom: 0;
 }
 
-.back > * > .selection-button {
+
+.selection > .selection-button {
     position: relative;
     top: 0%;
     left: 0%;
     height: 90%;
-    width: 30%;
+    width: 100%;
 
     text-align: center;
-    background-color: white;
+    background-color: transparent;
+    border: transparent;
     margin: 1%;
 }
 
