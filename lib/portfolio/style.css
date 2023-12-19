@@ -1,177 +1,174 @@
 /* main and whats in main */
 
 main {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0%;
-    left: 0%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
 
-    font-family: Consolas, monaco, monospace;
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
+  font-family: Consolas, monaco, monospace;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
 }
 
 main > header {
-    position: relative;
-    height: 100%;
-    width: 40%;
-    top: 0%;
-    left: 2%;
+  position: relative;
+  height: 100%;
+  width: 40%;
+  top: 0%;
+  left: 2%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main > footer {
-    position: relative;
-    width: 40%;
-    height: 100%;
-    left: 5%;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  left: 5%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* What's in main > header */
 
 header > h1 {
-    position: relative;
-    top: 0%;
-    left: 0%;
+  position: relative;
+  top: 0%;
+  left: 0%;
 
-    font-size: 5vh;
-    text-align: center;
+  font-size: 5vh;
+  text-align: center;
 }
 
 header > .back {
-    position: relative;
-    height: 70%;
-    width: 75%;
-    top: 0%;
-    left: 0%;
+  position: relative;
+  height: 70%;
+  width: 75%;
+  top: 0%;
+  left: 0%;
 
-    border: 5px solid black;
-    background-color: #666;
+  border: 5px solid black;
+  background-color: #666;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header > .front {
-    position: relative;
-    height: 30%;
-    width: 75%;
-    top: -5%;
-    left: 0%;
+  position: relative;
+  height: 30%;
+  width: 75%;
+  top: -5%;
+  left: 0%;
 
-    border: 5px solid black;
-    background-color: #333;
-    z-index: 69000;
+  border: 5px solid black;
+  background-color: #333;
+  z-index: 69000;
 }
 
 header > .front > .hole {
-    position: relative;
-    top: 20%;
-    left: 0%;
-    height: 15%;
-    width: 40%;
+  position: relative;
+  top: 20%;
+  left: 0%;
+  height: 15%;
+  width: 40%;
 
-    border: 5px solid black;
-    background-color: #666;
-    
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(0deg);
+  border: 5px solid black;
+  background-color: #666;
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
 }
 
 /* What's in header > .back */
 
 .back > * {
-    text-align: center;
-    background-color: transparent;
-    width: 90%;
-    margin: 1%;
-    height: 5%;
+  text-align: center;
+  background-color: transparent;
+  width: 90%;
+  margin: 1%;
+  height: 5%;
 }
 
 .back > * > .vanity {
-    position: relative;
-    top: 0%;
-    height: 1500%;
+  position: relative;
+  top: 0%;
+  height: 1500%;
 
-    text-align: center;
-    background-color: white;
-    border: 2px solid black;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .back > * > .selection {
-    position: relative;
-    top: -1575%;
-    left: 65%;
-    height: 100%;
-    width: 30%;
+  position: relative;
+  top: -1575%;
+  left: 65%;
+  height: 100%;
+  width: 30%;
 
-    text-align: center;
-    background-color: white;
-    border: 2px solid black;
-    bottom: 0;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+  bottom: 0;
 }
 
-
 .selection > .selection-button {
-    position: relative;
-    top: 0%;
-    left: 0%;
-    height: 90%;
-    width: 100%;
+  position: relative;
+  top: 0%;
+  left: 0%;
+  height: 90%;
+  width: 100%;
 
-    text-align: center;
-    background-color: transparent;
-    border: transparent;
-    margin: 1%;
+  text-align: center;
+  background-color: transparent;
+  border: transparent;
+  margin: 1%;
 }
 
 /* Whats in main > footer */
 
 footer > div {
-    position: relative;
-    width: 50vh;
-    height: 80%;
+  position: relative;
+  width: 50vh;
+  height: 80%;
 
-    border: 2px solid black;
-    transform: rotate(2deg);
-    transition: transform 0.5s ease;
+  border: 2px solid black;
+  transform: rotate(2deg);
+  transition: transform 0.5s ease;
 }
 
 footer > div:hover {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 footer > div > button {
-
 }
 
 @media (max-width: 750px) {
-    main {
-        display: block;
-        flex-direction: column !important;
-        margin: auto;
-        
-        justify-content: center;
-        align-items: center;
-    }
+  main {
+    display: block;
+    flex-direction: column !important;
+    margin: auto;
 
-    main > * {
-        position: relative;
-        left: 0% !important;
-        width: 100% !important;
-    }
+    justify-content: center;
+    align-items: center;
+  }
+
+  main > * {
+    position: relative;
+    left: 0% !important;
+    width: 100% !important;
+  }
 }
