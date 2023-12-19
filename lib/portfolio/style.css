@@ -155,6 +155,10 @@ footer > div:hover {
     transform: rotate(0deg);
 }
 
+footer > div > button {
+
+}
+
 @media (max-width: 750px) {
     main {
         display: block;
