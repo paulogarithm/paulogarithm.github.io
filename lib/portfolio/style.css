@@ -180,6 +180,7 @@ footer>div>.exit {
   height: 5%;
   background-color: white;
   border: 2px solid black;
+  font-size: 75%;
 }
 
 /* Set the color when hovering exit button */
@@ -197,7 +198,6 @@ footer>div>.exit:focus-visible {
 footer>div>.epitech-logo {
   -webkit-filter: invert(100%);
   filter: invert(100%);
-
   position: absolute;
   top: 4%;
   left: 5%;
@@ -208,10 +208,21 @@ footer>div>.epitech-logo {
 /* Set the title project properties */
 footer>div>h1 {
   position: absolute;
-  top: 3%;
+  top: 5%;
   width: 100%;
+  height: 1.5%;
+  font-size: 150%;
   text-align: center;
   text-transform: uppercase;
+}
+
+footer>div>.text {
+  position: absolute;
+  top: 10%;
+  width: 90%;
+  padding: 5%;
+  margin: auto;
+  font-size: 14px;
 }
 
 /* Dynamic resizing stuff */
@@ -220,7 +231,6 @@ footer>div>h1 {
     display: block;
     flex-direction: column !important;
     margin: auto;
-
     justify-content: center;
     align-items: center;
   }
