@@ -19,7 +19,7 @@ button {
 
 /* Header and footer */
 
-main>header {
+main > header {
   position: relative;
   height: 100%;
   width: 40%;
@@ -31,7 +31,7 @@ main>header {
   align-items: center;
 }
 
-main>footer {
+main > footer {
   position: relative;
   width: 40%;
   height: 100%;
@@ -44,7 +44,7 @@ main>footer {
 
 /* What's in main > header */
 
-header>h1 {
+header > h1 {
   position: relative;
   top: 0%;
   left: 0%;
@@ -53,7 +53,7 @@ header>h1 {
   text-align: center;
 }
 
-header>.back {
+header > .back {
   position: relative;
   height: 70%;
   width: 75%;
@@ -68,7 +68,7 @@ header>.back {
   align-items: center;
 }
 
-header>.front {
+header > .front {
   position: relative;
   height: 30%;
   width: 75%;
@@ -80,7 +80,7 @@ header>.front {
   z-index: 69000;
 }
 
-header>.front>.hole {
+header > .front > .hole {
   position: relative;
   top: 20%;
   left: 0%;
@@ -99,7 +99,7 @@ header>.front>.hole {
 
 /* What's in header > .back */
 
-.back>* {
+.back > * {
   text-align: center;
   background-color: transparent;
   width: 90%;
@@ -107,7 +107,7 @@ header>.front>.hole {
   height: 5%;
 }
 
-.back>*>.vanity {
+.back > * > .vanity {
   position: relative;
   top: 0%;
   height: 1500%;
@@ -116,7 +116,7 @@ header>.front>.hole {
   border: 2px solid black;
 }
 
-.back>*>.selection {
+.back > * > .selection {
   position: relative;
   top: -1575%;
   left: 65%;
@@ -129,7 +129,7 @@ header>.front>.hole {
   bottom: 0;
 }
 
-.selection>.selection-button {
+.selection > .selection-button {
   position: relative;
   top: 0%;
   left: 0%;
@@ -143,21 +143,20 @@ header>.front>.hole {
 }
 
 /* Tab selected for accessibility */
-.selection>.selection-button:focus-visible {
+.selection > .selection-button:focus-visible {
   outline: none;
   background-color: #ccc;
 }
 
-.back>*>.selection:hover {
+.back > * > .selection:hover {
   background-color: #ddd;
 }
-
 
 /* Whats in main > footer */
 
 /* Set the footer div properties */
-footer>div {
-  position: relative;
+footer > div {
+  position: absolute;
   width: 70%;
   padding-top: 100%;
 
@@ -167,12 +166,12 @@ footer>div {
 }
 
 /* Rotate when hovering the project div */
-footer>div:hover {
+footer > div:hover {
   transform: rotate(0deg);
 }
 
 /* Set the exit button properties */
-footer>div>.exit {
+footer > div > .exit {
   position: absolute;
   top: -3%;
   left: 65%;
@@ -184,18 +183,18 @@ footer>div>.exit {
 }
 
 /* Set the color when hovering exit button */
-footer>div>.exit:hover {
+footer > div > .exit:hover {
   background-color: #ddd;
 }
 
 /* Tab selected for accessibility */
-footer>div>.exit:focus-visible {
+footer > div > .exit:focus-visible {
   outline: none;
   background-color: #ccc;
 }
 
 /* Set the epitech logo */
-footer>div>.epitech-logo {
+footer > div > .epitech-logo {
   -webkit-filter: invert(100%);
   filter: invert(100%);
   position: absolute;
@@ -206,9 +205,9 @@ footer>div>.epitech-logo {
 }
 
 /* Set the title project properties */
-footer>div>h1 {
+footer > div > h1 {
   position: absolute;
-  top: 5%;
+  top: 3%;
   width: 100%;
   height: 1.5%;
   font-size: 150%;
@@ -216,13 +215,39 @@ footer>div>h1 {
   text-transform: uppercase;
 }
 
-footer>div>.text {
+/* Set the text properties */
+footer > div > .text {
   position: absolute;
+  height: auto;
   top: 10%;
   width: 90%;
   padding: 5%;
   margin: auto;
   font-size: 14px;
+}
+
+/* Set the foot properties */
+footer > div > .foot {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Set the github logo properties */
+.foot > .github-logo {
+  height: 50%;
+  width: auto;
+}
+
+/* Set the github text properties */
+.foot > .github-text {
+  font-size: 2vh;
+  width: 75%;
+  text-align: center;
 }
 
 /* Dynamic resizing stuff */
@@ -235,7 +260,7 @@ footer>div>.text {
     align-items: center;
   }
 
-  main>* {
+  main > * {
     position: relative;
     left: 0% !important;
     width: 100% !important;
