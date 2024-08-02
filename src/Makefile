@@ -38,7 +38,7 @@ deploy: all
 
 re: clean all
 
-publish: re
+publish: clean deploy
 	$(call say, Publishing...)
 	git add ..
 	git commit
