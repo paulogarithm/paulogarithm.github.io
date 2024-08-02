@@ -21,7 +21,7 @@ all:
 	$(call say, Getting packages...)
 	flutter pub get
 	$(call say, Building for web...)
-	flutter build web
+	flutter build web --release --base-href $(BASE_HREF)
 
 clean:
 	$(call say, Clean existing repository)
@@ -39,5 +39,11 @@ deploy: all
 	@echo "🚀 Flutter web URL: https://$(GITHUB_USER).github.io/$(OUTPUT)/"
 
 re: clean all
+
+publish:
+	$(call say, Publishing...)
+	git add ..
+	git commit
+	git push
 
 .PHONY: deploy clean all re
