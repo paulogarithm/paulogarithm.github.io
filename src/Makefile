@@ -21,7 +21,7 @@ all:
 	$(call say, Getting packages...)
 	flutter pub get
 	$(call say, Building for web...)
-	flutter build web --base-href $(BASE_HREF) --release
+	flutter build web
 
 clean:
 	$(call say, Clean existing repository)
