@@ -1,16 +1,19 @@
-# Makefile for deploying the Flutter web projects to GitHub
+# This is the makefile to deploy the application on web
 
 OUTPUT = portfolio
 ROOT = ..
 OUTPATH = $(ROOT)/$(OUTPUT)
 BASE_HREF = /$(OUTPUT)/
-# Replace this with your GitHub username
 GITHUB_USER = paulogarithm
 GITHUB_REPO = https://github.com/$(GITHUB_USER)/$(GITHUB_USER).github.io
 BUILD_VERSION := $(shell grep 'version:' pubspec.yaml | awk '{print $$2}')
 
 define say
 	@$(shell which echo) -ne "→ \x1B[34;1m$(strip $1)\x1B[m\n"
+endef
+
+define finish
+	@$(shell which echo) -ne "\x1B[32;1m$(strip $1)\x1B[m\n"
 endef
 
 ifndef OUTPUT
@@ -28,22 +31,17 @@ clean:
 	flutter clean
 
 deploy: all
-	# $(call say, Generating the web folder...)
-	# flutter create . --platform web
 	$(call say, Creating folders...)
 	-mkdir $(OUTPATH)
 	$(call say, Deploying to git repository...)
 	cp -r build/web/* $(OUTPATH)
-	
-	@echo "✅ Finished deploy: $(GITHUB_REPO)"
-	@echo "🚀 Flutter web URL: https://$(GITHUB_USER).github.io/$(OUTPUT)/"
 
 re: clean all
 
-publish:
+publish: re
 	$(call say, Publishing...)
 	git add ..
 	git commit
-	git push
+	$(call finish, 🚀 All done ! Finish the deploy in $(GITHUB_REPO) !)
 
 .PHONY: deploy clean all re
