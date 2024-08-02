@@ -11,8 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: AppContent(),
+    return MaterialApp(
+      title: "Portfolio",
+      theme: ThemeData(scaffoldBackgroundColor: const Color(0xFF030607)),
+      home: const AppContent(),
     );
   }
 }
