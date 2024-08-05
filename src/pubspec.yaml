@@ -18,5 +18,16 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  fonts:
+    - family: Google
+      fonts:
+        - asset: assets/fonts/google-sans/ProductSans-Regular.ttf
+        - asset: assets/fonts/google-sans/ProductSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/google-sans/ProductSans-Italic.ttf
+          style: italic
+
   assets:
     - assets/
+  
+

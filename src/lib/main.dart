@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'maincontent.dart';
 import 'asidecontent.dart';
+import "themes.dart";
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CustomTheme(
+    initialThemeKey: MyThemeKeys.DARK,
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,15 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Portfolio",
-      theme: ThemeData(
-        brightness: Brightness.light,
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF030607),
-      ),
+      theme: CustomTheme.of(context),
       home: const AppContent(),
     );
   }

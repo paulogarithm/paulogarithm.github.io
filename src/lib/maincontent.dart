@@ -16,7 +16,9 @@ class _MainContentState extends State<MainContent> {
     final double spaceBetween = screenScale(context, 1/3).height;
 
     return SingleChildScrollView(
-      child: Column(
+      child: Padding(
+        padding: EdgeInsets.only(top: screenScale(context, 1/10).height),
+        child: Column(
         children: [
           const HeadFrame(),
           SizedBox(height: spaceBetween),
@@ -33,6 +35,6 @@ class _MainContentState extends State<MainContent> {
           ),
         ],
       ),
-    );
+    ),);
   }
 }

@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
 import '../tools/typewritter.dart';
 import '../tools/screen_scale.dart';
+import '../constants.dart';
 
 class HeadFrame extends StatefulWidget {
   const HeadFrame({super.key});
 
   @override
-  State<HeadFrame> createState() => _HeadFrameCrappy();
-}
-
-class _HeadFrameCrappy extends State<HeadFrame> {
-  @override
-  Widget build(BuildContext context) {
-    final double refSize = screenScale(context, 2/3).width;
-
-    return Container(
-      width: refSize,
-      height: refSize,
-      color: Colors.red,
-    );
-  }
+  State<HeadFrame> createState() => _HeadFrameState();
 }
 
 class _HeadFrameState extends State<HeadFrame> {
@@ -36,7 +24,7 @@ class _HeadFrameState extends State<HeadFrame> {
   @override
   void initState() {
     super.initState();
-    tp = TypeWritter.fromMultiple(["Flutter", "C", "C++", "Lua", "Python"]);
+    tp = TypeWritter.fromMultiple(Constants.skillsNames);
     tp.setLetterDelay(100);
     tp.setStateFunc(setState);
     _doAfter(tp);
@@ -44,29 +32,59 @@ class _HeadFrameState extends State<HeadFrame> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 128.0,
-        left: screenScale(context, .18).width,
-        right: screenScale(context, .18).width,
-      ),
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Text.rich(
-          TextSpan(
-            text: "A super ",
-            style: TextStyle(
-              fontSize: screenScale(context, .045).width.clamp(10, 70),
-            ),
-            children: <TextSpan>[
-              TextSpan(
-                text: tp.get(),
-                style: const TextStyle(color: Colors.red),
+    final double refSize = screenScale(context, 2 / 3).width;
+
+    return Container(
+      width: refSize,
+      color: Colors.transparent,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              "Hi ! Welcome to the website of",
+              style: TextStyle(
+                fontSize: 18.0 + (screenScale(context, .03).width / 10),
+                color: Theme.of(context).primaryColor,
               ),
-              const TextSpan(text: " developer")
-            ],
+            ),
           ),
-        ),
+          Transform.translate(
+            offset: Offset(0, -screenScale(context, .008).width),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                "Paul Parisot",
+                style: TextStyle(
+                  fontSize: 68 + (screenScale(context, .1).width / 10),
+                ),
+              ),
+            ),
+          ),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text.rich(
+              TextSpan(
+                text: "A super ",
+                style: TextStyle(
+                  fontSize: 18.0 + (screenScale(context, .03).width / 10),
+                  color: Theme.of(context).hintColor,
+                ),
+                children: <TextSpan>[
+                  TextSpan(
+                    text: tp.get(),
+                    style: TextStyle(
+                      color: Theme.of(context).highlightColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const TextSpan(text: " developer")
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
