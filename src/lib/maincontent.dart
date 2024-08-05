@@ -1,7 +1,6 @@
-// ignore_for_file: avoid_print
-
 import 'package:flutter/material.dart';
-import 'typewritter.dart';
+import 'tools/screen_scale.dart';
+import 'mainframes/head.dart';
 
 class MainContent extends StatefulWidget {
   const MainContent({super.key});
@@ -10,53 +9,29 @@ class MainContent extends StatefulWidget {
   State<MainContent> createState() => _MainContentState();
 }
 
-Size screenScale(BuildContext context, double scale) =>
-    MediaQuery.of(context).size * scale;
-
 class _MainContentState extends State<MainContent> {
-  late TypeWritter tp;
-
-  void _doAfter(TypeWritter tp) async {
-    await tp.putWord();
-    await Future.delayed(const Duration(seconds: 3));
-    print("Bar");
-    await tp.removeWord();
-    print("Foo");
-    tp.nextWord();
-    _doAfter(tp);
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    tp = TypeWritter.fromMultiple(["Flutter", "C", "C++", "Lua", "Python"]);
-    tp.setLetterDelay(100);
-    tp.setStateFunc(setState);
-    _doAfter(tp);
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        top: 128.0,
-        left: screenScale(context, .18).width,
-        right: screenScale(context, .18).width,
-      ),
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Text.rich(
-          TextSpan(
-            text: "A super ",
-            style: TextStyle(
-                fontSize: screenScale(context, .045).width.clamp(10, 70)),
-            children: <TextSpan>[
-              TextSpan(
-                  text: tp.get(), style: const TextStyle(color: Colors.red)),
-              const TextSpan(text: " developer")
-            ],
+    final double referenceWidth = screenScale(context, 2/3).width;
+    final double spaceBetween = screenScale(context, 1/3).height;
+
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          const HeadFrame(),
+          SizedBox(height: spaceBetween),
+          Container(
+            color: Colors.green,
+            width: referenceWidth,
+            height: referenceWidth,
           ),
-        ),
+          SizedBox(height: spaceBetween),
+          Container(
+            color: Colors.blue,
+            width: referenceWidth,
+            height: referenceWidth,
+          ),
+        ],
       ),
     );
   }
