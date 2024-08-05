@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
 class _CreateButton extends StatelessWidget {
@@ -11,7 +12,7 @@ class _CreateButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void onPress() {
-      js.context.callMethod('open', [LINKS.GITHUB]);
+      js.context.callMethod('open', [link]);
     }
 
     return Padding(
@@ -19,7 +20,7 @@ class _CreateButton extends StatelessWidget {
       child: SizedBox(
         width: 40,
         child: IconButton(
-            onPressed: onPress, icon: Image.asset("assets/github-logo.png")),
+            onPressed: onPress, icon: Image.asset(imagePath)),
       ),
     );
   }
@@ -35,7 +36,7 @@ class FixedContent extends StatelessWidget {
 
     return Container(
       width: width,
-      color: Colors.blue,
+      color: Colors.transparent,
       child: const Align(
         alignment: Alignment.bottomCenter,
         child: Column(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'maincontent.dart';
-import 'fixedcontent.dart';
+import 'asidecontent.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Portfolio",
-      theme: ThemeData(scaffoldBackgroundColor: const Color(0xFF030607)),
+      theme: ThemeData(
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF030607),
+      ),
       home: const AppContent(),
     );
   }
