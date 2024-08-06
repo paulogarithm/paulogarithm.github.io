@@ -40,45 +40,57 @@ class _CreateButtonLinkAsset extends _CreateButtonAsset {
         });
 }
 
-class FixedContent extends StatefulWidget {
-  const FixedContent({super.key});
+class AsideContent extends StatefulWidget {
+  const AsideContent({super.key});
 
   @override
-  State<FixedContent> createState() => _FixedContentState();
+  State<AsideContent> createState() => _AsideContentState();
 }
 
-class _FixedContentState extends State<FixedContent> {
+class _AsideContentState extends State<AsideContent> {
   @override
   Widget build(BuildContext context) {
-    final double screenWidth = MediaQuery.of(context).size.width;
-    final double width = (screenWidth * 0.1).clamp(50, 100);
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        bool isWide = constraints.maxWidth > Constants.widthConstraint;
 
-    return Container(
-      width: width,
-      color: Colors.transparent,
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _CreateButtonLinkAsset(
-                "assets/github-logo.png", Constants.githubLink),
-            _CreateButtonLinkAsset(
-                "assets/github-logo.png", Constants.linkedinLink),
-            _CreateButton(const Icon(Icons.dark_mode), () {
-              setState(() {
-                CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.DARK);
-              });
-            }),
-            _CreateButton(const Icon(Icons.light_mode), () {
-              setState(() {
-                CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.LIGHT);
-              });
-            })
-          ],
-        ),
-      ),
+        return Container(
+          width: isWide
+              ? (constraints.maxWidth * 0.1).clamp(50, 100)
+              : double.infinity,
+          color: Colors.transparent,
+          child: Align(
+            alignment: isWide ? Alignment.bottomCenter : Alignment.centerLeft,
+            child: isWide
+                ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: _buildButtons(),
+                  )
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: _buildButtons(),
+                  ),
+          ),
+        );
+      },
     );
+  }
+
+  List<Widget> _buildButtons() {
+    return [
+      _CreateButtonLinkAsset("assets/github-logo.png", Constants.githubLink),
+      _CreateButtonLinkAsset("assets/github-logo.png", Constants.linkedinLink),
+      _CreateButton(const Icon(Icons.dark_mode), () {
+        setState(() {
+          CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.DARK);
+        });
+      }),
+      _CreateButton(const Icon(Icons.light_mode), () {
+        setState(() {
+          CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.LIGHT);
+        });
+      }),
+    ];
   }
 }

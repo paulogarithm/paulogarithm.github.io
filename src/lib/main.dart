@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'maincontent.dart';
 import 'asidecontent.dart';
-import "themes.dart";
+import 'themes.dart';
+import 'constants.dart';
 
 void main() {
   runApp(const CustomTheme(
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Portfolio - Paul PARISOT",
       theme: CustomTheme.of(context),
       home: const AppContent(),
     );
@@ -27,14 +29,27 @@ class AppContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Row(
-        children: <Widget>[
-          FixedContent(),
-          Expanded(
-            child: MainContent(),
-          ),
-        ],
+    return Scaffold(
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth > Constants.widthConstraint) {
+            // Tablet/Desktop layout
+            return const Row(
+              children: <Widget>[
+                AsideContent(),
+                Expanded(child: MainContent()),
+              ],
+            );
+          } else {
+            // Mobile layout
+            return const Column(
+              children: <Widget>[
+                AsideContent(),
+                Expanded(child: MainContent()),
+              ],
+            );
+          }
+        },
       ),
     );
   }

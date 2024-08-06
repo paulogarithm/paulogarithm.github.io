@@ -11,7 +11,7 @@ class HeadFrame extends StatefulWidget {
 }
 
 class _HeadFrameState extends State<HeadFrame> {
-  late TypeWritter tp;
+  late TypeWritter _tp;
 
   void _doAfter(TypeWritter tp) async {
     await tp.putWord();
@@ -24,10 +24,16 @@ class _HeadFrameState extends State<HeadFrame> {
   @override
   void initState() {
     super.initState();
-    tp = TypeWritter.fromMultiple(Constants.skillsNames);
-    tp.setLetterDelay(100);
-    tp.setStateFunc(setState);
-    _doAfter(tp);
+    _tp = TypeWritter.fromMultiple(Constants.skillsNames);
+    _tp.setLetterDelay(100);
+    _tp.setStateFunc(setState);
+    _doAfter(_tp);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tp.dispose();
   }
 
   @override
@@ -73,7 +79,7 @@ class _HeadFrameState extends State<HeadFrame> {
                 ),
                 children: <TextSpan>[
                   TextSpan(
-                    text: tp.get(),
+                    text: _tp.get(),
                     style: TextStyle(
                       color: Theme.of(context).highlightColor,
                       fontWeight: FontWeight.bold,

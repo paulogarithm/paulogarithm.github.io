@@ -10,4 +10,6 @@ class Constants {
     "Python",
     "Haskell"
   ];
+
+  static const int widthConstraint = 600;
 }
