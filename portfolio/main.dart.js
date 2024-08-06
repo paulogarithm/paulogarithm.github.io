@@ -62352,7 +62352,7 @@ $S:45}
 A.r0.prototype={
 ak(){return new A.H4(B.l)}}
 A.H4.prototype={
-V(a){var s=null,r="icons/github-logo.png",q=B.c.fc(A.cg(a,s,t.w).w.a.a*0.1,50,100)
+V(a){var s=null,r="assets/github-logo.png",q=B.c.fc(A.cg(a,s,t.w).w.a.a*0.1,50,100)
 return A.zo(s,new A.ky(B.iS,s,s,A.a6j(A.b([A.acU(r,"https://github.com/paulogarithm"),A.acU(r,"https://www.linkedin.com/in/paulparisot"),new A.oC(B.A6,new A.a10(this,a),s),new A.oC(B.A7,new A.a11(this,a),s)],t.d),B.dJ,B.hw),s),B.F,s,s,s,s,q)}}
 A.a10.prototype={
 $0(){this.a.ar(new A.a1_(this.b))},

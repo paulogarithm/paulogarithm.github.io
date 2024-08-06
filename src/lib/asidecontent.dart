@@ -63,9 +63,9 @@ class _FixedContentState extends State<FixedContent> {
           mainAxisSize: MainAxisSize.min,
           children: [
             _CreateButtonLinkAsset(
-                "icons/github-logo.png", Constants.githubLink),
+                "assets/github-logo.png", Constants.githubLink),
             _CreateButtonLinkAsset(
-                "icons/github-logo.png", Constants.linkedinLink),
+                "assets/github-logo.png", Constants.linkedinLink),
             _CreateButton(const Icon(Icons.dark_mode), () {
               setState(() {
                 CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.DARK);
