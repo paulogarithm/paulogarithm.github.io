@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 import 'tools/screen_scale.dart';
+import 'constants.dart';
+import 'mainframes/experiences.dart';
 import 'mainframes/head.dart';
 import 'mainframes/about.dart';
-import 'constants.dart';
 
 class MainContent extends StatefulWidget {
   const MainContent({super.key});
@@ -37,8 +38,8 @@ class _MainContentState extends State<MainContent> {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: durationMs),
           curve: Curves.easeOut,
-          transform:
-              Matrix4.translationValues(0, isVisible ? 0 : durationMs / 10, 0),
+          transform: Matrix4.translationValues(
+              0, (isVisible ? 0 : (durationMs / 10)), 0),
           child: child,
         ),
       ),
@@ -49,7 +50,7 @@ class _MainContentState extends State<MainContent> {
   Widget build(BuildContext context) {
     final double referenceWidth = screenScale(context, 2 / 3).width;
     final double spaceBetween = screenScale(context, 1 / 4).height;
-    final double refPadding = screenScale(context, 1 / 10).height;
+    final double refPadding = screenScale(context, 1 / 6).height;
 
     return SingleChildScrollView(
       child: Padding(
@@ -60,13 +61,7 @@ class _MainContentState extends State<MainContent> {
             SizedBox(height: spaceBetween),
             _createAnimation(const AboutFrame(), 1),
             SizedBox(height: spaceBetween),
-            _createAnimation(
-                Container(
-                  color: Colors.blue,
-                  width: referenceWidth,
-                  height: referenceWidth,
-                ),
-                2),
+            _createAnimation(const ExperienceFrame(), 2),
             SizedBox(height: spaceBetween),
             _createAnimation(
                 Container(
