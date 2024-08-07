@@ -1,2 +1,1 @@
-You're looking at the portfolio of Paul, a $AGE year old developper passionate with developing !
-
+Hello there! My name is Paul, and I'm a $AGE year old french developer passionate with coding!

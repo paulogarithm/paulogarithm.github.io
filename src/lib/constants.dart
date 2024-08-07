@@ -22,4 +22,6 @@ class Constants {
   static final bool todayIsBirthday =
       Constants.myBirthday.month == DateTime.now().month &&
           Constants.myBirthday.day == DateTime.now().day;
+
+  static const int appearTimeMs = 400;
 }

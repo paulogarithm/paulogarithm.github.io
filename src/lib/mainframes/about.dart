@@ -8,14 +8,14 @@ import '../constants.dart';
 TextStyle _getTitleParams(BuildContext context) {
   return TextStyle(
     color: Theme.of(context).primaryColor,
-    fontSize: 40.0 + (screenScale(context, .03).width / 10),
+    fontSize: 30.0 + (screenScale(context, .03).width / 5),
   );
 }
 
 TextStyle _getNormalParams(BuildContext context) {
   return TextStyle(
     color: Theme.of(context).highlightColor,
-    fontSize: 20.0 + (screenScale(context, .03).width / 10),
+    fontSize: 15.0 + (screenScale(context, .03).width / 5),
   );
 }
 
