@@ -2,22 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:roblox_portfolio/params.dart';
 import '../tools/screen_scale.dart';
 import '../constants.dart';
-
-TextStyle _getTitleParams(BuildContext context) {
-  return TextStyle(
-    color: Theme.of(context).primaryColor,
-    fontSize: 30.0 + (screenScale(context, .03).width / 5),
-  );
-}
-
-TextStyle _getNormalParams(BuildContext context) {
-  return TextStyle(
-    color: Theme.of(context).highlightColor,
-    fontSize: 15.0 + (screenScale(context, .03).width / 5),
-  );
-}
 
 class AboutFrame extends StatefulWidget {
   const AboutFrame({super.key});
@@ -69,7 +56,7 @@ class _AboutFrameState extends State<AboutFrame> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text("About me", style: _getTitleParams(context)),
+          Text("About me", style: getTitleParams(context)),
           FutureBuilder<String>(
             future: _fileContentFuture,
             builder: (context, snapshot) {
@@ -78,12 +65,12 @@ class _AboutFrameState extends State<AboutFrame> {
               } else if (snapshot.hasError) {
                 return Text(
                   "...",
-                  style: _getNormalParams(context),
+                  style: getBigTextParams(context),
                 );
               } else {
                 return Text(
                   snapshot.data ?? '...',
-                  style: _getNormalParams(context),
+                  style: getBigTextParams(context),
                 );
               }
             },

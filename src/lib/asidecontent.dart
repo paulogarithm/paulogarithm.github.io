@@ -81,14 +81,14 @@ class _AsideContentState extends State<AsideContent> {
     return [
       _CreateButtonLinkAsset("assets/github-logo.png", Constants.githubLink),
       _CreateButtonLinkAsset("assets/github-logo.png", Constants.linkedinLink),
-      _CreateButton(const Icon(Icons.dark_mode), () {
-        setState(() {
-          CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.DARK);
-        });
-      }),
       _CreateButton(const Icon(Icons.light_mode), () {
         setState(() {
           CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.LIGHT);
+        });
+      }),
+      _CreateButton(const Icon(Icons.dark_mode), () {
+        setState(() {
+          CustomTheme.instanceOf(context).changeTheme(MyThemeKeys.DARK);
         });
       }),
     ];

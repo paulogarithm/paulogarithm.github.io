@@ -63,6 +63,7 @@ class _MainContentState extends State<MainContent> {
             SizedBox(height: spaceBetween),
             _createAnimation(const ExperienceFrame(), 2),
             SizedBox(height: spaceBetween),
+            // TODO: Projects
             _createAnimation(
                 Container(
                   color: Colors.red,
@@ -71,6 +72,7 @@ class _MainContentState extends State<MainContent> {
                 ),
                 3),
             SizedBox(height: spaceBetween),
+            // TODO: Fun facts
             _createAnimation(
                 Container(
                   color: Colors.green,

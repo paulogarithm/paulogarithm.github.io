@@ -1,0 +1,11 @@
+Faurecia Clarion Electronics
+===
+My goal was to develop the main software of the [demonstrator] that was
+displayed for the CES congrees of 2024. This projects wons the innovation award.
+
+This is where I learnt to use [Flutter], a front-end developping framework that
+works with the [Dart] programming language.
+However, the technology we chosed to use at the end was the famous game engine
+[Unity] that uses C# to develop applications.
+===
+Flutter/C#/Unity
