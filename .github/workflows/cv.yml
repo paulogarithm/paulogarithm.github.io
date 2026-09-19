@@ -31,7 +31,7 @@ jobs:
             [ -f "$tex" ] || continue;
             base=$(basename "$tex" .tex);
             pdflatex -interaction=nonstopmode -halt-on-error -output-directory=cv "$tex";
-            url="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/cv/${filename}.pdf";
+            url="https://${{ github.repository_owner }}.github.io/cv/${filename}.pdf";
             qrencode -o "cv/qr/${base}.png" "$url";
           done;
           rm -f cv/*.aux cv/*.log cv/*.out;
