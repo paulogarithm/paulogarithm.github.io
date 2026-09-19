@@ -1,0 +1,176 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+% actual document shit
+
+\begin{document}
+
+\begin{center}
+	{\huge\bfseries Paul Parisot}
+	\\[10pt]
+	{\Large Software Engineer - System Programming}
+	\\
+\end{center}
+
+% section for contact
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-10pt}
+
+\begin{center}
+	Github: \href{https://github.com/paulogarithm}{paulogarithm}
+	\\
+	\href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+	\\
+\end{center}
+
+\par\vspace{-15pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+% section for the about us
+
+{\large\bfseries About}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Systems-focused software engineer with strong foundations in C/C++, Go, and low level languages.
+\\
+Experienced in building programming languages, game engines, and distributed systems.
+\\
+Open-source contributor with 10k+ LoC on critical packages.
+\\
+Currently deepening theoretical CS foundations (graph theory, complexity theory, automata) through preparation for the French \textit{agrégation d'informatique}, a highly selective national CS competitive exam.
+\par\vspace{5pt}
+
+% section for skills
+
+{\large\bfseries Skills }
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Technical}: C/C++, Golang, Python, Flutter, JavaScript/TypeScript, Haskell, Lua(u), OCaml, Assembly
+\\
+\hspace*{5pt}{\bfseries Other}: Git Toolchain, Devops (Docker, Kubernetes, ...), CI/CD, Linux Environment
+
+\par\vspace{5pt}
+
+% section for the professional experience
+
+{\large\bfseries Professional Experience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Junior Software Engineer (Open-Sourced)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Developed 6+ core packages in Gnolang (Go variant), including printf, EVM compatibility, and a petition system.
+	\item Found and fixed {\bfseries 6 critical bugs} causing runtime crashes;{\bfseries ~10k lines of code} contributed.
+	\item Wrote extensive tests under strict CI/CD and code review policies.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Software Demo Engineer}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Built a {\bfseries Unity-based demo app} showcased at {\bfseries CES 2024}, simulating real-time GPS and UI navigation.
+	\item Designed interactive tools like a {\bfseries GPS path engine} and POI search interface.
+	\item Delivered production-ready features {\bfseries ahead of schedule}, praised for speed and code quality.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Technical Assistant \& Instructor}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Taught {\bfseries 400+ students} in C, C++, asm, and Haskell; reviewed and graded assignments.
+	\item Created {\bfseries interactive learning content} (quizzes, flipped classes, tutorials).
+	\item Applied {\bfseries pedagogical methods} (Constructivism, Cognitivism…) to boost student engagement.
+	\item Contributed to a historically high {\bfseries success rate} in ASTEK-coached cohorts.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% personal projects
+
+{\large\bfseries Personal Projects}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{{\bfseries blorox -- Modular 3D game engine inspired by Roblox}} (\href{https://github.com/paulogarithm/blorox}{link})
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Designed a game engine in C++ with runtime-loaded rendering and logic modules. \\
+	Embedded Lua scripting \& mimicked Roblox's API for compatibility. \\
+	In active development, pending finalization until C++26 reflection features are available.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C, C++, Lua, ECS Architecture, Plugin Systems, Runtime Linking, Engine Design
+
+\par\vspace{8pt}
+
+\underline{\bfseries cclass -- Runtime Memory Mutation Engine} (\href{https://github.com/paulogarithm/cclass}{link})
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Designed a pure C framework that dynamically modifies compiled assembly instructions inside raw memory pages. \\
+    Utilized {\bfseries \texttt{mmap}} system calls with precise protection flags to bypass traditional virtual table dispatch overheads. \\
+    Enforced strict memory alignment rules to maintain absolute stability across underlying hardware execution targets.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C, Linux Systems, x86 Assembly, mmap, Memory Safety, Low-level Debugging
+
+\par\vspace{8pt}
+
+\underline{\bfseries Sledge -- Cross-Cloud Data Migration, Synchronization \& Orchestration Engine}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Developed and completed a generic cross-cloud migration tool handling complex data structures and database interactions. \\
+    Architected and shipped a complete backend platform in Go optimized for high-volume data stream operations, via a custom cloud abstraction layer (\texttt{provicol}) supporting AWS S3 and GCP. \\
+    Utilized the Docker API at runtime to dynamically spin up, isolate, and orchestrate concurrent environment containers. \\
+    Applied strong relational algebra principles to optimize {\bfseries SQL queries} and manage cross-platform data integrity.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Go, SQL, Docker API, Python, Data Integrity, Cloud Computing, System Automation
+
+\par\vspace{8pt}
+
+\underline{\bfseries ZZZcript -- Statically-typed FP language} (\href{https://github.com/paulogarithm/zzzcript}{link})
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Built a {\bfseries lexer, parser, AST interpreter} from scratch. \\
+	Wrote recursive eval engine in {\bfseries Go}, inspired by Haskell and Golang.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Go, Haskell, Parsing Theory, AST Design, Functional Semantics, Interpreter Architecture
+
+\par\vspace{8pt}
+
+% education
+
+{\large\bfseries Education}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Master's Degree in Information Technology (Master's level diploma) \\
+Level-7 Certification - Expert in Software Engineering
+
+\vspace{6pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificate in Management \\
+Coursework Accounting, Business Administration, Organizational Management
+
+\end{document}

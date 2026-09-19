@@ -1,0 +1,42 @@
+name: build my resume
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: install dependancies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y texlive-latex-recommended texlive-latex-extra qrencode
+
+      - name: setup & cleaning
+        run: |
+          mkdir -p cv/qr
+          rm -rf cv/*.pdf cv/qr/*.png
+
+      - name: build pdfs & qr codes
+        run: |
+          for tex in cv/src/*.tex; do
+            [ -f "$tex" ] || continue;
+            base=$(basename "$tex" .tex);
+            pdflatex -interaction=nonstopmode -halt-on-error -output-directory=cv "$tex";
+            url="https://raw.githubusercontent.com/${{ github.repository }}/main/cv/${base}.pdf";
+            qrencode -o "cv/qr/${filename}.png" "$url";
+          done;
+          rm -f cv/*.aux cv/*.log cv/*.out;
+
+      - name: commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "build: auto pdf and qr codes"
+          file_pattern: "cv/*.pdf cv/qr/*.png"
