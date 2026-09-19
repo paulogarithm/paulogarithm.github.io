@@ -31,7 +31,13 @@ jobs:
             [ -f "$tex" ] || continue;
             base=$(basename "$tex" .tex);
             pdflatex -interaction=nonstopmode -halt-on-error -output-directory=cv "$tex";
-            url="https://${{ github.repository_owner }}.github.io/cv/${filename}.pdf";
+            owner="${{ github.repository_owner }}";
+            repo="${{ github.event.repository.name }}";
+            if [ "$repo" = "${owner}.github.io" ]; then
+              url="https://${owner}.github.io/cv/${base}.pdf";
+            else
+              url="https://${owner}.github.io/${repo}/cv/${base}.pdf";
+            fi;
             qrencode -o "cv/qr/${base}.png" "$url";
           done;
           rm -f cv/*.aux cv/*.log cv/*.out;
