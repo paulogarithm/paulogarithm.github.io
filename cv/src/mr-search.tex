@@ -1,0 +1,147 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.4cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\huge\bfseries Paul Parisot}
+    \\[10pt]
+    {\Large Software Engineer - Low-Latency \& Systems Programming}
+    \\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-10pt}
+
+\begin{center}
+    Github: \href{https://github.com/paulogarithm}{paulogarithm} 
+    \quad | \quad 
+    \href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+\end{center}
+
+\par\vspace{-15pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+% section for the about us
+{\large\bfseries About}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Systems software engineer deeply focused on hardware-level optimization, low-latency architectures, and memory deterministic designs. \\
+Extensive practical exploration of thread synchronization, lock-free concepts, and asynchronous network multiplexing. \\
+Driven by predictability, cache-friendly data layouts, and squeezing maximal performance out of every CPU cycle under Linux.
+
+\par\vspace{5pt}
+
+% section for skills
+{\large\bfseries Skills}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Core Automation}: C, C++ (Modern standards), Python, Bash, SQL, Go, Assembly \\
+\hspace*{5pt}{\bfseries Concurrency \& Memory}: Atomic primitives (\texttt{\_Atomic} / \texttt{std::atomic}), Multithreading, Custom Allocators, Cache-line alignment \\
+\hspace*{5pt}{\bfseries Networking \& Sockets}: Network Multiplexing (\texttt{select}), Asynchronous I/O (\texttt{Boost.Asio}), TCP/UDP Sockets \\
+\hspace*{5pt}{\bfseries Software Engineering}: Linux Kernel primitives, Performance Profiling, Git Toolchain, Automated CI/CD pipelines
+
+\par\vspace{5pt}
+
+% section for the professional experience
+{\large\bfseries Professional Experience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Core Software Engineer (Distributed Systems)}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Designed core modules in a distributed ecosystem, enforcing execution determinism and strict data consistency.
+    \item Diagnosed and resolved {\bfseries 6 critical multi-threaded race conditions} and runtime memory corruptions.
+    \item Implemented high-throughput testing suites under strict peer-review policies, delivering {\bfseries 10k lines of production code}.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Software Engineer (High-Performance C++)}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Engineered high-frequency C++ network modules for real-time embedded telemetry, optimizing raw packet processing.
+    \item Implemented deterministic routing algorithms for navigation systems showcased at {\bfseries CES 2024}.
+    \item Utilized automated testing paradigms to validate throughput benchmarks and guarantee minimal processing jitters.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Systems Programming Instructor}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Mentored {\bfseries 400+ students} in advanced systems architecture, low-level memory management, and C/C++ memory layouts.
+    \item Enforced strict evaluation policies regarding race-condition identification, thread safety, and resource leaks.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% technical projects
+{\large\bfseries Low-Latency \& Systems Projects}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries High-Throughput Network Engine (Zappy)}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Architected a pure C single-threaded network server utilizing system-level \texttt{select} multiplexing for non-blocking I/O. \\
+    Achieved a {\bfseries 100\% leak-free} memory footprint under rigorous validation, engineered entirely as a solo developer. \\
+    Stress-tested with multi-gigabyte data ingestion streams (\texttt{/dev/random}) to validate protocol parsing stability and eliminate buffer fragmentation.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Pure C, Network Multiplexing, Non-blocking Sockets, Linux I/O, Stress Testing, Memory Sanitizers
+
+\par\vspace{8pt}
+
+\underline{\bfseries rodox -- Low-Latency Systems Engine}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Developed a Linux C++ engine utilizing strict data-oriented structures (ECS layout) to optimize L1/L3 CPU cache locality. \\
+    Designed custom {\bfseries static pool allocators} to completely bypass runtime heap allocations (\texttt{malloc}/\texttt{new}) during hot execution paths. \\
+    Integrated {\bfseries \texttt{Boost.Asio}} for asynchronous network handling alongside hardware-accelerated SIMD instruction sets.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C++, Boost.Asio, Custom Allocators, Cache-Line Optimization, SIMD Vectorization, Modern C++
+
+\par\vspace{8pt}
+
+{\large\bfseries Theoretical Research \& Advanced Hacks}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item {\bfseries Computer Science Theory}: In-depth preparation for advanced theoretical competitions, specializing in concurrency formalisms, automata, and operational semantics.
+    \item {\bfseries Runtime Assembly Injection (cclass)}: Engineered a custom engine using Linux \texttt{mmap} pages to hot-patch compiled assembly stubs, bypassing traditional dispatch tables overhead.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% education
+{\large\bfseries Education}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Master's Degree in Information Technology (Level-7 RNCP Certification) -- Specialization: Systems Architecture
+
+\vspace{4pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificate in Management -- Technical Leadership \& Strategy
+
+\end{document}

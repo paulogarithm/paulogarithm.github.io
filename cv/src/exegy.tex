@@ -1,0 +1,153 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.4cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\huge\bfseries Paul Parisot} %[cite: 1, 2]
+    \\[10pt]
+    {\Large Software Engineer - C++ \& Low-Latency Systems}
+    \\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-10pt}
+
+\begin{center}
+    Github: \href{https://github.com/paulogarithm}{paulogarithm} %[cite: 1, 2]
+    \quad | \quad 
+    \href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu} %[cite: 1, 2]
+\end{center}
+
+\par\vspace{-15pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+% section for the about us
+{\large\bfseries About}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Systems software engineer deeply focused on modern C++ performance optimization, low-level Linux runtimes, and hardware-software boundaries. \\
+Specialized in zero-allocation memory design, concurrent thread synchronization, and asynchronous networking architectures. \\
+Pragmatic debugger experienced in diagnosing subtle performance bottlenecks, memory corruptions, and race conditions in production environments.
+
+\par\vspace{5pt}
+
+% section for skills
+{\large\bfseries Skills}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Core Systems}: C++ (Modern C++17/20), C, Go, Python, x86/ARM Assembly stubs \\
+\hspace*{5pt}{\bfseries Low-Level Linux}: Memory Management (\texttt{heap, stack, shm}), POSIX Threads, Atomics, Driver Communication Boundaries \\
+\hspace*{5pt}{\bfseries Performance \& Networking}: Asynchronous I/O (\texttt{Boost.Asio}), TCP/IP Paradigms, Cache-Line Linearity (ECS Layout) \\
+\hspace*{5pt}{\bfseries Engineering Toolchain}: Linux, CMake, GCC, GDB, Valgrind (Memcheck/Helgrind), Git, Jenkins CI/CD pipelines
+
+\par\vspace{5pt}
+
+% section for the professional experience
+{\large\bfseries Professional Experience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Software Engineer (Systems \& Tooling)}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Developed and optimized low-level C++ software modules tailored for hardware driver communication interfaces.
+    \item Engineered internal testing \& visual tracking applications using C\# (Unity engine) under strict system resource limitations.
+    \item Analyzed physical architecture constraints to maintain deterministic software behavior and memory guarantees.
+    \item Collaborated closely within an industrial Agile/Scrum framework, tracking requirements and features via {\bfseries Jira}.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Core Software Engineer (Distributed Runtime Engines)} %
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Refactored core multi-threaded execution sub-systems to guarantee operational determinism and maximum execution speed.
+    \item Isolated, reproduced, and patched {\bfseries 6 critical bugs} causing runtime crashes, delivering 10k+ LOC to production. %[cite: 1, 2]
+    \item Authored automated regression and integration testing suites embedded into continuous deployment (CI/CD) workflows.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Systems Programming Instructor \& Code Auditor} %[cite: 1, 2]
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Taught advanced C/C++ memory architectures, pointer arithmetic, and native Linux system programming to {\bfseries 400+ students}. %[cite: 1, 2]
+    \item Audited large-scale repositories to enforce strict production standards: error-handling paths, cache awareness, and memory safety.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% technical projects
+{\large\bfseries Low-Latency \& Systems Technical Projects}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries rodox -- Low-Latency Linux Systems Engine} %[cite: 2]
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Built a modular runtime infrastructure in C++ using a data-oriented Entity Component System (ECS) to avoid cache misses. \\
+    Completely bypassed OS-level heap allocation latencies (\texttt{malloc}/\texttt{new}) by designing thread-safe {\bfseries custom static pool allocators}. \\
+    Implemented high-throughput, non-blocking asynchronous networking components utilizing {\bfseries \texttt{Boost.Asio}} over TCP. %[cite: 2]
+    Hardened execution paths against hardware-software latency spikes using profiling tools including {\bfseries CMake}, {\bfseries GDB}, and {\bfseries Valgrind}.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Modern C++, SIMD, Boost.Asio, Memory Management, Linux System APIs, Profiling (Valgrind), Concurrency %[cite: 2]
+
+\par\vspace{8pt}
+
+\underline{\bfseries cclass -- Runtime Memory Mutation Engine} %[cite: 2]
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Engineered a raw C engine capable of dynamically rewriting compiled assembly instructions inside secure execution memory regions. \\
+    Leveraged system-level {\bfseries \texttt{mmap}} calls with explicit page protections to remove virtual dispatch runtime overheads. \\
+    Enforced strict memory alignment checks to prevent hardware execution faults across target host platforms.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C, Linux Systems, x86 Assembly, mmap, Memory Safety, Low-level Debugging
+
+\par\vspace{8pt}
+
+\underline{\bfseries Sledge -- Containerized Orchestration \& Core Backend}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Architected and implemented a high-performance core backend infrastructure in Go optimized for high-volume execution streams. \\
+    Utilized the Docker API at runtime to dynamically spin up, isolate, and orchestrate concurrent environment containers. \\
+    Wrote automated validation and monitoring tooling using {\bfseries Python} scripts to verify continuous data flow and system state health.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Go, Docker API, Python Scripting, Data Streaming, System Automation
+
+\par\vspace{5pt}
+
+% education
+{\large\bfseries Education}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\ %[cite: 1, 2]
+Master's Degree in Information Technology (Master's level diploma) \\ %[cite: 1, 2]
+Level-7 Certification - Expert in Software Engineering \\ %[cite: 1, 2]
+Specialization: Systems Architecture \\ %[cite: 1, 2]
+
+\vspace{4pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\ %[cite: 1, 2]
+Certificate in Management \\ %[cite: 1, 2]
+Technical Leadership \& Strategy %[cite: 1, 2]
+
+\end{document}

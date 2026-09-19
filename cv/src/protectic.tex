@@ -1,0 +1,153 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.4cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\huge\bfseries Paul Parisot} %
+    \\[10pt]
+    {\Large Software Engineer - Systems, Simulation \& Architecture}
+    \\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-10pt}
+
+\begin{center}
+    Github: \href{https://github.com/paulogarithm}{paulogarithm} %[cite: 1, 2]
+    \quad | \quad 
+    \href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu} %[cite: 1, 2]
+\end{center}
+
+\par\vspace{-15pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+% section for the about us
+{\large\bfseries About}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Systems software engineer specialized in algorithm design, low-level Linux environments, and complex simulation components. \\
+Proven track record in building high-performance architectures (ECS), concurrent sub-systems, and interactive visualization tools. \\
+Analytical problem-solver focused on software craftsmanship, code robustness, and moving progressively into advanced technical architecture.
+
+\par\vspace{5pt}
+
+% section for skills
+{\large\bfseries Skills}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Core Programming}: C++, C, C\# (Unity), Go, Python, Java, x86/ARM Assembly stubs \\
+\hspace*{5pt}{\bfseries Systems \& Modeling}: Data-Oriented Design (ECS), Concurrent Modeling, Multi-threading, IPC (\texttt{shm}) \\
+\hspace*{5pt}{\bfseries Tooling \& Infrastructure}: Linux, CMake, GCC, GDB, Valgrind, Docker Engine, Git, Cross-Compilation \\
+\hspace*{5pt}{\bfseries Data \& Automation}: Python Data Automation, Relational Schemas, Code Auditing, Lifecycle Documentation
+
+\par\vspace{5pt}
+
+% section for the professional experience
+{\large\bfseries Professional Experience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Software Engineer (Systems \& Visualization)}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Developed and optimized native C++ software modules dedicated to hardware driver communication interfaces.
+    \item Engineered interactive C\# applications using the Unity engine for real-time subsystem visualization and tracking tools.
+    \item Managed strict resource constraints and memory-safety parameters on target environments.
+    \item Collaborated within an industrial Agile/Scrum environment, interfacing with technical requirements via {\bfseries Jira}.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Core Software Engineer (Distributed Runtime Engines)} %
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Refactored core runtime sub-systems, focusing on multi-threaded thread safety and resource-efficient concurrency. %[cite: 2]
+    \item Isolated and resolved {\bfseries 6 critical execution bugs} (race conditions, memory leaks), committing over 10,000 lines of production code. %[cite: 1, 2]
+    \item Designed full integration test suites to validate complex system-level protocols and distributed communications.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Systems Programming Instructor \& Code Auditor} %[cite: 1, 2]
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Instructed {\bfseries 400+ students} in advanced C/C++ memory management, low-level pointer mechanics, and Unix system calls. %[cite: 1, 2]
+    \item Conducted exhaustive code audits to eliminate undefined behaviors, memory corruption, and unhandled system signals.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% technical projects
+{\large\bfseries Architecture \& Algorithmic Technical Projects}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries rodox -- Low-Latency Linux Systems Engine} %[cite: 2]
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Engineered a modular runtime infrastructure under Linux utilizing a data-oriented layout (ECS) to eliminate CPU cache misses. \\
+    Developed custom {\bfseries static pool allocators} to entirely bypass OS-level heap allocation latencies (\texttt{malloc}/\texttt{new}). \\
+    Implemented high-performance asynchronous networking and communication layers using {\bfseries \texttt{Boost.Asio}} over TCP. %[cite: 2]
+    Profiled and hardened code integrity using {\bfseries GDB} and {\bfseries Valgrind} to guarantee absolute deterministic execution. %[cite: 2]
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C++, Boost.Asio, Memory Management, Linux System APIs, Profiling (Valgrind), CMake, Concurrency %[cite: 2]
+
+\par\vspace{8pt}
+
+\underline{\bfseries Sledge -- Containerized Orchestration \& Data Core}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Architected and developed a complete backend platform in Go optimized for high-volume data stream operations. \\
+    Utilized the Docker API at runtime to dynamically spin up, isolate, and orchestrate concurrent environment containers. \\
+    Authored automated processing and validation scripts in {\bfseries Python} to handle schema validation and track pipeline stability.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Go, Docker API, Python Scripting, Data Integrity, Linux Environments, System Automation
+
+\par\vspace{8pt}
+
+\underline{\bfseries cclass -- Runtime Memory Mutation Engine} %[cite: 2]
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Designed a pure C framework that dynamically modifies compiled assembly instructions inside raw memory pages. \\
+    Utilized {\bfseries \texttt{mmap}} system calls with precise protection flags to bypass traditional virtual table dispatch overheads. \\
+    Enforced strict memory alignment rules to maintain absolute stability across underlying hardware execution targets.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C, Linux Systems, x86 Assembly, mmap, Memory Safety, Low-level Debugging
+
+\par\vspace{5pt}
+
+% education
+{\large\bfseries Education}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\ %[cite: 1, 2]
+Master's Degree in Information Technology (Master's level diploma) \\ %[cite: 1, 2]
+Level-7 Certification - Expert in Software Engineering \\ %[cite: 1, 2]
+Specialization: Systems Architecture \\ %[cite: 1, 2]
+
+\vspace{4pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\ %[cite: 1, 2]
+Certificate in Management \\ %[cite: 1, 2]
+Technical Leadership \& Strategy %[cite: 1, 2]
+
+\end{document}

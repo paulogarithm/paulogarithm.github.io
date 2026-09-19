@@ -1,0 +1,184 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.1cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+% actual document shit
+
+\begin{document}
+
+\begin{center}
+	{\huge\bfseries Paul Parisot}
+	\\[6pt]
+	{\Large Software Engineer - System Programming}
+\end{center}
+
+% section for contact
+
+\par\vspace{-12pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-10pt}
+
+\begin{center}
+	Github: \href{https://github.com/paulogarithm}{paulogarithm} \quad $\vert$ \quad \href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+\end{center}
+
+\par\vspace{-15pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{1pt}
+
+% section for the about us
+
+{\large\bfseries About}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{1pt}
+
+Systems-focused software engineer with strong foundations in C/C++, Luau, Go, and low level languages.
+\\
+Experienced in building programming languages, game engines, and distributed systems.
+\\
+Open-source contributor with 10k+ LoC on critical packages, and deep hands-on experience with the Roblox platform: Luau scripting, EditableMesh procedural generation, and a from-scratch C++ engine reimplementing Roblox client/server replication.
+\\
+Currently deepening theoretical CS foundations (graph theory, complexity theory, automata) through preparation for the French \textit{agrégation d'informatique}, a highly selective national CS competitive exam.
+\par\vspace{1pt}
+
+% section for skills
+
+{\large\bfseries Skills }
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{1pt}
+
+\hspace*{5pt}{\bfseries Technical}: C/C++, Golang, Python, Flutter, JavaScript/TypeScript, Haskell, Lua(u), OCaml, Assembly
+\\
+\hspace*{5pt}{\bfseries Systems}: Runtime Library Loading, Network Replication \& Serialization, ECS Architecture, Reflection (C++26)
+\\
+\hspace*{5pt}{\bfseries Other}: Git, Devops (Docker, Kubernetes), CI/CD, Linux
+
+\par\vspace{1pt}
+
+% section for the professional experience
+
+{\large\bfseries Professional Experience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{1pt}
+
+{\bfseries Gno.land - Junior Software Engineer (Open-Sourced)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Developed 6+ core packages in Gnolang (Go variant), including printf, EVM compatibility, and a petition system.
+	\item Found and fixed {\bfseries 6 critical bugs} causing runtime crashes;{\bfseries ~10k lines of code} contributed.
+	\item Wrote extensive tests under strict CI/CD and code review policies.
+\end{itemize}
+
+\par\vspace{1pt}
+
+{\bfseries Faurecia / Forvia - Software Demo Engineer}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Built a {\bfseries Unity-based demo app} showcased at {\bfseries CES 2024}, simulating real-time GPS and UI navigation.
+	\item Designed interactive tools like a {\bfseries GPS path engine} and POI search interface.
+	\item Delivered production-ready features {\bfseries ahead of schedule}, praised for speed and code quality.
+\end{itemize}
+
+\par\vspace{1pt}
+
+{\bfseries Epitech / IONIS - Technical Assistant \& Instructor}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Taught {\bfseries 400+ students} in C, C++, asm, and Haskell; reviewed and graded assignments.
+	\item Created {\bfseries interactive learning content} (quizzes, flipped classes, tutorials).
+	\item Applied {\bfseries pedagogical methods} (Constructivism, Cognitivism…) to boost student engagement.
+	\item Contributed to a historically high {\bfseries success rate} in ASTEK-coached cohorts.
+\end{itemize}
+
+\par\vspace{1pt}
+
+% personal projects
+
+{\large\bfseries Personal Projects}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{1pt}
+
+\underline{{\bfseries Luau / Roblox Platform Engineering}}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Built a {\bfseries PNG decoder \& renderer from scratch in Luau}, parsing raw PNG binary data (chunks, zlib/DEFLATE inflation) and rasterizing pixels directly on-platform with no native image APIs. \\
+	Designed a {\bfseries procedural generation engine} (islands, houses, trees) using Roblox's low-level {\bfseries EditableMesh} API to generate and optimize triangle geometry at runtime. \\
+	Deep working knowledge of Luau's sandboxing model, scripting constraints, and Roblox Studio's mesh/rendering pipeline.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Lua(u), Procedural Generation, Binary Parsing, Computational Geometry, EditableMesh, Roblox Studio
+
+\par\vspace{1pt}
+
+\underline{{\bfseries blorox -- Modular 3D game engine inspired by Roblox}} (\href{https://github.com/paulogarithm/blorox}{link})
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Designed a game engine in C++ that reimplements Roblox's client/server architecture, with rendering and logic modules {\bfseries dynamically loaded at runtime} (including a runtime-loaded \texttt{lua.so} for embedded scripting). \\
+	Currently tackling {\bfseries network replication}: serializing partial mutations of C++ class fields (single-field diffs) between client and server without full-object re-serialization. \\
+	Prototyping a solution using {\bfseries C++26 reflection} to auto-generate per-field replication metadata; project paused pending compiler support maturity.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C, C++, Lua, ECS Architecture, Runtime Linking, Network Replication, Serialization, Engine Design
+
+\par\vspace{1pt}
+
+\underline{\bfseries cclass -- Runtime Memory Mutation Engine} (\href{https://github.com/paulogarithm/cclass}{link})
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Parses the process's own compiled binary at runtime and uses \texttt{nm} symbol lookups to compute exact function sizes. \\
+    Copies raw function bytes into an executable memory page (via {\bfseries \texttt{mmap}}) allocated directly after each object instance. \\
+    Reserves the last 8 bytes before the copied function's end as a hidden slot for the object pointer, read by the function itself as an implicit \texttt{this} -- emulating method dispatch without a vtable.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C, Linux Systems, x86 Assembly, mmap, Memory Safety, Low-level Debugging
+
+\par\vspace{1pt}
+
+\underline{\bfseries Sledge -- Cross-Cloud Data Migration, Synchronization \& Orchestration Engine}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Architected and shipped a generic cross-cloud migration backend in Go, via a custom cloud abstraction layer (\texttt{provicol}) supporting AWS S3 and GCP. \\
+    Utilized the Docker API at runtime to dynamically spin up, isolate, and orchestrate concurrent environment containers. \\
+    Applied strong relational algebra principles to optimize {\bfseries SQL queries} and manage cross-platform data integrity.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Go, SQL, Docker API, Python, Data Integrity, Cloud Computing, System Automation
+
+\par\vspace{1pt}
+
+\underline{\bfseries ZZZcript -- Statically-typed FP language} (\href{https://github.com/paulogarithm/zzzcript}{link})
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Built a {\bfseries lexer, parser, AST interpreter} from scratch, with a recursive eval engine in {\bfseries Go} inspired by Haskell.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} Go, Haskell, Parsing Theory, AST Design, Functional Semantics, Interpreter Architecture
+
+\par\vspace{1pt}
+
+% education
+
+{\large\bfseries Education}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{1pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Master's Degree in Information Technology (Master's level diploma) \\
+Level-7 Certification - Expert in Software Engineering
+
+\vspace{1pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificate in Management \\
+Coursework Accounting, Business Administration, Organizational Management
+
+\end{document}
