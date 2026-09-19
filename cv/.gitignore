@@ -1,5 +1,4 @@
-*.out
-*.pdf
-*.log
-*.aux
-qr/*.png
+src/*.out
+src/*.pdf
+src/*.log
+src/*.aux
