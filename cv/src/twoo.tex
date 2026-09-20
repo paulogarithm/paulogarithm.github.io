@@ -1,0 +1,146 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.2cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\pagestyle{empty}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+% actual document shit
+
+\begin{document}
+
+\begin{center}
+	{\huge\bfseries Paul Parisot}
+	\\[4pt]
+	{\Large Ingénieur Logiciel Backend - Pédagogie \& Accompagnement}
+	\\
+\end{center}
+
+% section for contact
+
+\par\vspace{-5pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-5pt}
+
+\begin{center}
+	Github: \href{https://github.com/paulogarithm}{paulogarithm}
+	\\
+	\href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+	\\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{7pt}
+
+% section for the about us
+
+{\large\bfseries À propos}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Ingénieur logiciel backend (Go, Python, SQL, Docker), avec deux ans d'expérience d'accompagnement de {\bfseries plus de 400 étudiants} comme assistant technique à Epitech : pédagogie, écoute, création de contenus interactifs.
+\\
+Formation complémentaire en management à McGill University (Montréal), dont la sociologie du travail (Corporate Behaviour), et pratique professionnelle de l'anglais (C1).
+\\
+Contributeur open-source (plus de 10 000 lignes de code sur des packages critiques). En préparation de l'agrégation d'informatique.
+\par\vspace{5pt}
+
+% section for skills
+
+{\large\bfseries Compétences}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Maîtrise}: Golang, Python, C/C++, Lua(u), SQL (PostgreSQL), Shell, Haskell, OCaml, Assembleur
+\\
+\hspace*{5pt}{\bfseries Cloud \& DevOps}: GCP, Docker, Kubernetes, Traefik, CI/CD, Git, Environnement Linux
+\\
+\hspace*{5pt}{\bfseries Transverses}: pédagogie, animation de cours, création de contenus interactifs, travail en équipe
+\\
+\hspace*{5pt}{\bfseries Langues}: Français, Anglais (C1, professionnel)
+
+\par\vspace{5pt}
+
+% section for the professional experience
+
+{\large\bfseries Expérience Professionnelle}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Assistant Technique \& Formateur (ASTEK, 2 ans)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Enseignement à {\bfseries plus de 400 étudiants} en C, C++, asm et Haskell (dont des problèmes de multithreading) ; correction et évaluation des rendus.
+	\item Création de {\bfseries contenus pédagogiques interactifs} (quiz, cours inversés, tutoriels) et contribution à un {\bfseries taux de réussite historiquement élevé} au sein des promotions coachées par l'ASTEK.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Ingénieur Logiciel Junior (Open-Source)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts) ; correction de {\bfseries 6 bugs critiques} ; {\bfseries ~10k lignes de code} contribuées.
+	\item Rédaction de tests exhaustifs sous des politiques strictes de CI/CD et de revue de code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Ingénieur Démo Logicielle}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Conception d'un {\bfseries moteur de calcul d'itinéraire GPS} et d'une interface de recherche de POI, intégrés à une application démo présentée au {\bfseries CES 2024}.
+	\item Livraison de fonctionnalités prêtes pour la production {\bfseries en avance sur le planning}, salué pour la rapidité et la qualité du code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% personal projects
+
+{\large\bfseries Projets Personnels}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries Sledge -- Moteur de migration, synchronisation et orchestration multi-cloud}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Outil générique de migration multi-cloud gérant des structures de données complexes et des bases de données, avec une plateforme backend complète en Go et une couche d'abstraction cloud personnalisée ({\ttfamily provicol}) supportant AWS S3 et GCP. \\
+    Utilisation de l'API Docker à l'exécution pour orchestrer dynamiquement des conteneurs d'environnements concurrents.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+\underline{\bfseries Area -- Plateforme d'automatisation de services (clone d'IFTTT)}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Projet d'équipe : conception et développement seul du backend en Go avec PostgreSQL, en architecture microservices (services en Go et Python), derrière un proxy Traefik. \\
+    Intégration d'une quinzaine de services tiers via OAuth, webhooks et requêtes HTTP, y compris des adaptateurs à base de polling planifié (cron) pour les services ne pouvant pas émettre de webhooks.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+% education
+
+{\large\bfseries Formation}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Diplôme d'ingénieur en technologies de l'information (diplôme de niveau Master) \\
+Certification Niveau 7 - Expert en ingénierie logicielle
+
+\vspace{6pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificat en Management -- GPA : 3.57/4.0 \\
+Cours suivis : Comptabilité, Managerial Economics \& Analysis, Corporate Behaviour (sociologie du travail), Business, Mathématiques, Gestion de projet, Marketing
+
+\end{document}

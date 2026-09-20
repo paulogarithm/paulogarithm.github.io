@@ -1,0 +1,154 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.2cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\pagestyle{empty}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+% actual document shit
+
+\begin{document}
+
+\begin{center}
+	{\huge\bfseries Paul Parisot}
+	\\[4pt]
+	{\Large Ingénieur Logiciel - Enseignement de l'Informatique}
+	\\
+\end{center}
+
+% section for contact
+
+\par\vspace{-5pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-5pt}
+
+\begin{center}
+	Github: \href{https://github.com/paulogarithm}{paulogarithm}
+	\\
+	\href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+	\\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{7pt}
+
+% section for the about us
+
+{\large\bfseries À propos}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Ingénieur logiciel et assistant technique (ASTEK) à Epitech pendant deux ans : {\bfseries plus de 400 étudiants} accompagnés en C, C++, assembleur et Haskell, avec un goût marqué pour la transmission.
+\\
+En préparation de l'agrégation d'informatique {\bfseries (algorithmique des graphes, complexité, automates)}, avec une formation complémentaire en management à McGill University, dont la sociologie du travail (Corporate Behaviour).
+\\
+Contributeur open-source (plus de 10 000 lignes de code sur des packages critiques) et pratique professionnelle de l'anglais (C1).
+\par\vspace{5pt}
+
+% section for skills
+
+{\large\bfseries Compétences}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Enseignés (ASTEK)}: C, C++, Assembleur, Haskell (dont multithreading)
+\\
+\hspace*{5pt}{\bfseries Maîtrise}: C/C++, Golang, Python, Lua(u), Haskell, OCaml, Assembleur, Shell, SQL
+\\
+\hspace*{5pt}{\bfseries Outils}: gdb, Valgrind, Ghidra, Git, Docker, Kubernetes, CI/CD, Environnement Linux
+\\
+\hspace*{5pt}{\bfseries Transverses}: pédagogie, création de contenus interactifs, animation de cours, travail en équipe
+\\
+\hspace*{5pt}{\bfseries Langues}: Français, Anglais (C1, professionnel)
+
+\par\vspace{5pt}
+
+% section for the professional experience
+
+{\large\bfseries Expérience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Assistant Technique \& Formateur (ASTEK, 2 ans)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Enseignement à {\bfseries plus de 400 étudiants} en C, C++, asm et Haskell (dont des problèmes de multithreading) ; correction et évaluation des rendus.
+	\item Création de {\bfseries contenus pédagogiques interactifs} (quiz, cours inversés, tutoriels) et contribution à un {\bfseries taux de réussite historiquement élevé} au sein des promotions coachées par l'ASTEK.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Ingénieur Logiciel Junior (Open-Source)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts) ; correction de {\bfseries 6 bugs critiques} ; {\bfseries ~10k lignes de code} contribuées.
+	\item Rédaction de tests exhaustifs sous des politiques strictes de CI/CD et de revue de code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Ingénieur Démo Logicielle}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Conception d'un {\bfseries moteur de calcul d'itinéraire GPS} et d'une interface de recherche de POI, intégrés à une application démo présentée au {\bfseries CES 2024}.
+	\item Livraison de fonctionnalités prêtes pour la production {\bfseries en avance sur le planning}, salué pour la rapidité et la qualité du code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% personal projects
+
+{\large\bfseries Projets Personnels}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries Zappy -- Serveur TCP multi-clients en C}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), codé seul : buffer borné par client et mise en quarantaine des clients qui le saturent ; aucune erreur ni fuite sous Valgrind ; tests unitaires et fonctionnels.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/cclass}{cclass} -- Moteur de mutation mémoire à l'exécution}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Framework en C pur réécrivant à l'exécution des instructions assembleur en mémoire ({\bfseries \texttt{mmap}}, flags de protection, alignement strict) pour contourner le surcoût du dispatch par vtable.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/zzzcript}{ZZZcript} -- Langage fonctionnel statiquement typé}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Lexer, parser et interpréteur AST from scratch, avec un moteur d'évaluation récursif en {\bfseries Go} inspiré de Haskell et Golang.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+% education
+
+{\large\bfseries Formation}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Diplôme d'ingénieur en technologies de l'information (diplôme de niveau Master) \\
+Certification Niveau 7 - Expert en ingénierie logicielle
+
+\vspace{6pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificat en Management -- GPA : 3.57/4.0 \\
+Cours suivis : Comptabilité, Managerial Economics \& Analysis, Corporate Behaviour (sociologie du travail), Business, Mathématiques, Gestion de projet, Marketing
+
+\end{document}

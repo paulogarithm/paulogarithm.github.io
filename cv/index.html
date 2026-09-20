@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de CV</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            width: calc(100% - 24px);
+            margin-bottom: 15px;
+        }
+        button.search-btn {
+            background-color: #0366d6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button.search-btn:hover {
+            background-color: #005cc5;
+        }
+        .result {
+            margin-top: 20px;
+            min-height: 50px;
+        }
+        .action-btns {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .action-btns a {
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #2ea44f;
+            color: white;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        .action-btns a:hover {
+            opacity: 0.8;
+        }
+        .error {
+            color: #d73a49;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Trouver un CV</h2>
+        <input type="text" id="cvInput" placeholder="Nom du CV (ex: jean-dupont)" onkeypress="handleEnter(event)">
+        <button class="search-btn" onclick="checkCV()">Vérifier</button>
+        
+        <div id="resultArea" class="result">
+        </div>
+    </div>
+
+    <script>
+        function handleEnter(e) {
+            if (e.key === 'Enter') {
+                checkCV();
+            }
+        }
+
+        async function checkCV() {
+            const input = document.getElementById('cvInput').value.trim().toLowerCase();
+            const resultArea = document.getElementById('resultArea');
+            
+            if (!input) {
+                resultArea.innerHTML = '<span class="error">Veuillez entrer un nom.</span>';
+                return;
+            }
+
+            resultArea.innerHTML = '<i>Recherche en cours...</i>';
+
+            const pdfPath = `${input}.pdf`;
+            const qrPath = `qr/${input}.png`;
+
+            try {
+                const response = await fetch(pdfPath, { method: 'HEAD' });
+
+                if (response.ok) {
+                    resultArea.innerHTML = `
+                        <span style="color: #2ea44f; font-weight: bold;">✅ CV Trouvé !</span>
+                        <div class="action-btns">
+                            <a href="${qrPath}" target="_blank">QR Code</a>
+                            <a href="${pdfPath}" target="_blank">Ouvrir PDF</a>
+                            <a href="${pdfPath}" download="${input}.pdf">Download</a>
+                        </div>
+                    `;
+                } else {
+                    resultArea.innerHTML = '<span class="error">❌ CV introuvable. Vérifiez le nom.</span>';
+                }
+            } catch (error) {
+                resultArea.innerHTML = '<span class="error">Erreur de connexion.</span>';
+            }
+        }
+    </script>
+</body>
+</html>

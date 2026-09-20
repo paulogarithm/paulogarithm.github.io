@@ -1,0 +1,150 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.4cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\huge\bfseries Paul Parisot}
+    \\[10pt]
+    {\Large Software Engineer - Core C++ \& Performance Computing}
+    \\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-10pt}
+
+\begin{center}
+    Github: \href{https://github.com/paulogarithm}{paulogarithm} 
+    \quad | \quad 
+    \href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+\end{center}
+
+\par\vspace{-15pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+% section for the about us
+{\large\bfseries About}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Performance-driven software engineer specialized in C/C++ systems programming and low-level optimization. \\
+Strong foundations in applied physics/mathematics for 3D environments, including matrix transformations and vectorization. \\
+Experienced in industrial embedded environments, writing clean, modular, and highly efficient code under Linux.
+
+\par\vspace{5pt}
+
+% section for skills
+{\large\bfseries Skills}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Technical Expertise}: C, C++ (Modern standards up to C++20/23), Assembly, Go, Linux Systems \\
+\hspace*{5pt}{\bfseries Math \& Optimization}: 3D Math (4x4 Matrices, Coordinate Systems), SIMD Vectorization, Collision Algorithms \\
+\hspace*{5pt}{\bfseries Protocols \& Tooling}: TCP/IP Sockets, Git Toolchain, DevOps (Docker, Kubernetes), CI/CD pipelines \\
+\hspace*{5pt}{\bfseries Methodology}: Agile/Scrum workflow, Jira task tracking, Strict Code Review compliance
+
+\par\vspace{5pt}
+
+% section for the professional experience
+{\large\bfseries Professional Experience}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Software Engineer (Embedded C++ / Agile)}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Developed low-level C++ network modules for embedded communications, ensuring reliable data exchange.
+    \item Engineered a real-time navigation and path-generation system showcased globally at {\bfseries CES 2024}.
+    \item Worked within a structured Agile/Scrum environment, utilizing {\bfseries Jira} for tracking requirements and deliveries.
+    \item Formulated clean, robust architectures praised by management for their speed and edge-case coverage.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Junior Software Engineer (Open-Source Core)}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Developed 6+ core packages in an open-source runtime environment, focusing on memory efficiency and safety.
+    \item Fixed {\bfseries 6 critical runtime crash bugs}, contributing over {\bfseries 10k lines of code} to core packages.
+    \item Wrote comprehensive regression and integration tests under automated, zero-tolerance CI/CD pipelines.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Technical Assistant \& Instructor}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Mentored over {\bfseries 400 students} in low-level concepts: C, C++, Assembly, and algorithm design.
+    \item Enforced strict industrial coding standards, code quality metrics, and algorithmic complexity constraints.
+    \item Drafted technical documentation, tutorials, and advanced evaluation content for junior student cohorts.
+\end{itemize}
+
+\par\vspace{5pt}
+
+% technical projects
+{\large\bfseries Technical Projects \& Applied Mathematics}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries rodox -- Modular Systems \& Render Engine under Linux}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Designed a low-level dynamic engine architecture in C/C++ natively on Linux using an ECS architecture. \\
+    Implemented 3D mathematical layers using {\bfseries 4x4 transformation matrices (CFrames)} and linear algebra. \\
+    Optimized data layouts and compute bottlenecks using hardware-accelerated {\bfseries SIMD vectorization} pipelines.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C++, Linux OS, 3D Linear Algebra, SIMD Optimization, Memory Management, Dynamic Linking
+
+\par\vspace{8pt}
+
+\underline{\bfseries Raytracer -- 3D Mathematical Renderer from Scratch}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Developed a software-based light transport engine in C++ focused on mathematical modeling. \\
+    Coded vector calculus operations, matrix inversions, and high-frequency {\bfseries ray-object collision algorithms}.
+\end{adjustwidth}
+\par
+{\bfseries Skills:} C++, Geometry Algorithms, Collision Detection, Linear Algebra, Object-Oriented Design
+
+\par\vspace{8pt}
+
+{\large\bfseries Theoretical Foundations \& Core Research}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item {\bfseries Advanced Computer Science}: Rigorous study of theoretical frameworks (automata theory, advanced complexity, and formal languages).
+    \item {\bfseries Low-Level Systems}: Engineered a runtime assembly-patching engine in pure C; dynamically injected instance context addresses into compiled binary stubs executed on-the-fly via allocated \texttt{mmap} pages. (open source, on my github)
+    \item {\bfseries Project Management}: Acquired formal methodologies in team alignment, scope definition, and strategic risk assessment.
+\end{itemize}
+\par\vspace{8pt}
+
+% education
+{\large\bfseries Education}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Master's Degree in Information Technology (Level-7 RNCP Certification) \\
+Specialization: Systems Engineering and Advanced Software Architecture
+
+\vspace{6pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificate in Management \\
+Complementary coursework in foundational physics/engineering contexts and administration.
+
+\end{document}
