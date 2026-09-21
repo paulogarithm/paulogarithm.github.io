@@ -11,8 +11,6 @@
 \setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
 \setlength{\parindent}{0pt}
 
-% actual document shit
-
 \begin{document}
 
 \begin{center}
@@ -21,8 +19,6 @@
 	{\Large Ingénieur Logiciel - Développeur Backend \& DevOps}
 	\\
 \end{center}
-
-% section for contact
 
 \par\vspace{-5pt}
 \rule{\linewidth}{0.4pt}
@@ -39,30 +35,24 @@
 \rule{\linewidth}{0.4pt}
 \par\vspace{7pt}
 
-% section for the about us
-
 {\large\bfseries À propos}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-Ingénieur logiciel avec de solides bases en Go, C/C++ et Python, orienté backend, cloud et automatisation (Docker, Kubernetes, CI/CD).
+Ingénieur logiciel avec de solides bases en Go, C/C++ et Python, orienté backend, cloud et automatisation.
 \\
 Expérience de développement dans des environnements exigeants : contributions open-source sous revue de code et CI/CD stricte (plus de 10 000 lignes de code sur Gno.land), démo présentée au CES 2024, enseignement auprès de plus de 400 étudiants.
 \\
 Formation complémentaire en management à McGill University (comptabilité, économie managériale, gestion de projet), utile pour dialoguer avec les métiers. En préparation de l'agrégation d'informatique.
 \par\vspace{5pt}
 
-% section for skills
-
 {\large\bfseries Compétences}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-\hspace*{5pt}{\bfseries Maîtrise}: Golang, Python, C/C++, Lua(u)
-\\
-\hspace*{5pt}{\bfseries Bonne connaissance}: SQL (PostgreSQL), Shell, Haskell, OCaml, Assembleur
+\hspace*{5pt}{\bfseries Maîtrise}: Golang, Python, C/C++, Lua, SQL (PostgreSQL), Shell, Haskell, OCaml, Assembleur
 \\
 \hspace*{5pt}{\bfseries Notions}: Java, AWS (S3)
 \\
@@ -72,8 +62,6 @@ Formation complémentaire en management à McGill University (comptabilité, éc
 
 \par\vspace{5pt}
 
-% section for the professional experience
-
 {\large\bfseries Expérience Professionnelle}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
@@ -81,7 +69,7 @@ Formation complémentaire en management à McGill University (comptabilité, éc
 
 {\bfseries Gno.land - Ingénieur Logiciel Junior (Open-Source)}
 \begin{itemize}[noitemsep, topsep=0pt]
-	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts), incluant printf et une compatibilité avec l'EVM.
+	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts).
 	\item Détection et correction de {\bfseries 6 bugs critiques} causant des crashs runtime ; {\bfseries ~10k lignes de code} contribuées.
 	\item Rédaction de tests exhaustifs sous des politiques strictes de CI/CD et de revue de code.
 \end{itemize}
@@ -91,7 +79,7 @@ Formation complémentaire en management à McGill University (comptabilité, éc
 {\bfseries Faurecia / Forvia - Ingénieur Démo Logicielle}
 \begin{itemize}[noitemsep, topsep=0pt]
 	\item Conception d'un {\bfseries moteur de calcul d'itinéraire GPS} et d'une interface de recherche de POI, intégrés à une application démo présentée au {\bfseries CES 2024}.
-	\item Livraison de fonctionnalités prêtes pour la production {\bfseries en avance sur le planning}, salué pour la rapidité et la qualité du code.
+	\item Livraison de fonctionnalités prêtes en production {\bfseries en avance sur le planning}, salué pour la rapidité et la qualité du code.
 \end{itemize}
 
 \par\vspace{5pt}
@@ -103,8 +91,6 @@ Formation complémentaire en management à McGill University (comptabilité, éc
 \end{itemize}
 
 \par\vspace{5pt}
-
-% personal projects
 
 {\large\bfseries Projets Personnels}
 \par\vspace{-8pt}
@@ -138,15 +124,22 @@ Formation complémentaire en management à McGill University (comptabilité, éc
 \par
 \begin{adjustwidth}{5pt}{0pt}
     Conception et codage seul d'un serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), avec gestion des clients par liste chaînée de connexions. \\
-    Buffer borné par client et mise en quarantaine temporaire des clients qui le saturent, pour éviter tout épuisement mémoire. \\
-    Aucune erreur ni fuite mémoire sous Valgrind (y compris à l'arrêt par SIGINT) ; tests unitaires et fonctionnels.
+    Buffer borné par client et mise en quarantaine temporaire des clients qui le saturent, pour éviter tout épuisement mémoire.
 \end{adjustwidth}
 \par
 {\bfseries Compétences :} C, sockets TCP, select, gestion mémoire, Valgrind, tests unitaires et fonctionnels
 
 \par\vspace{8pt}
 
-% education
+\underline{\bfseries \href{https://github.com/paulogarithm/cclass}{cclass} -- Moteur de mutation mémoire à l'exécution}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Framework en C pur réécrivant à l'exécution des instructions assembleur en mémoire ({\bfseries \texttt{mmap}}, flags de protection, alignement strict) pour contourner le surcoût du dispatch par vtable.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C, systèmes Linux, assembleur x86, mmap, sûreté mémoire
+
+\par\vspace{8pt}
 
 {\large\bfseries Formation}
 \par\vspace{-8pt}

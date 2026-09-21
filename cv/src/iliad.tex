@@ -11,14 +11,18 @@
 \setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
 \setlength{\parindent}{0pt}
 
+% actual document shit
+
 \begin{document}
 
 \begin{center}
 	{\huge\bfseries Paul Parisot}
 	\\[4pt]
-	{\Large Ingénieur Logiciel - C/C++ \& Systèmes Bas Niveau}
+	{\Large Ingénieur Logiciel - C, Go \& Systèmes Réseau}
 	\\
 \end{center}
+
+% section for contact
 
 \par\vspace{-5pt}
 \rule{\linewidth}{0.4pt}
@@ -35,30 +39,40 @@
 \rule{\linewidth}{0.4pt}
 \par\vspace{7pt}
 
+% section for the about us
+
 {\large\bfseries À propos}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-Ingénieur logiciel spécialisé en C/C++ et programmation bas niveau (assembleur, gestion mémoire, réseau, Linux), attentif à la fiabilité du code : tests, Valgrind, CI/CD.
+Ingénieur logiciel spécialisé en C/C++ et Go (programmation système et réseau, Linux, conteneurs), attentif à la fiabilité et à la performance du code.
 \\
-Un an d'études à Montréal (McGill University, management) et pratique professionnelle de l'anglais (C1).
+Contributeur open-source en Go (plus de 10 000 lignes de code sur des packages critiques de Gno.land), serveur TCP en C sans erreur ni fuite mémoire sous Valgrind, outil de migration multi-cloud en Go.
 \\
-Contributeur open-source (plus de 10 000 lignes de code sur des packages critiques). Préparation en cours de l'agrégation d'informatique {\bfseries (algorithmique des graphes, complexité, automates)}.
+Un an d'études à Montréal (McGill University, management) et pratique professionnelle de l'anglais (C1). En préparation de l'agrégation d'informatique.
 \par\vspace{5pt}
+
+% section for skills
 
 {\large\bfseries Compétences}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-\hspace*{5pt}{\bfseries Maîtrise}: C/C++, Golang, Python, Lua, Haskell, OCaml, Assembleur, Shell, SQL, Arduino (notions)
+\hspace*{5pt}{\bfseries Maîtrise}: C/C++, Golang, Python, Lua(u), Haskell, OCaml, Assembleur, Shell, SQL
 \\
-\hspace*{5pt}{\bfseries Outils}: GDB, Ghidra, Valgrind, Git, Docker, Kubernetes, CI/CD, Environnement Linux
+\hspace*{5pt}{\bfseries Réseau \& API}: sockets TCP (select), HTTP, OAuth, webhooks, Traefik
+\\
+\hspace*{5pt}{\bfseries Notions}: Arduino (projets personnels)
+\\
+\hspace*{5pt}{\bfseries Outils}: gdb, Ghidra, Valgrind, Git, Docker, Kubernetes, CI/CD, Environnement Linux
 \\
 \hspace*{5pt}{\bfseries Langues}: Français, Anglais (C1, compétences professionnelles)
 
 \par\vspace{5pt}
+
+% section for the professional experience
 
 {\large\bfseries Expérience Professionnelle}
 \par\vspace{-8pt}
@@ -86,22 +100,38 @@ Contributeur open-source (plus de 10 000 lignes de code sur des packages critiqu
 {\bfseries Epitech / IONIS - Assistant Technique \& Formateur}
 \begin{itemize}[noitemsep, topsep=0pt]
 	\item Enseignement à {\bfseries plus de 400 étudiants} en C, C++, asm et Haskell (dont des problèmes de multithreading) ; correction et évaluation des rendus.
-	\item Création de {\bfseries contenus pédagogiques interactifs} (quiz, cours inversés, tutoriels) et contribution à un {\bfseries taux de réussite historiquement élevé} au sein des promotions coachées par l'ASTEK.
+	\item Création de {\bfseries contenus pédagogiques interactifs} (quiz, cours inversés, tutoriels) et contribution à un {\bfseries taux de réussite historiquement élevé} au sein des promotions coachées en tant qu'assistant technique.
 \end{itemize}
 
 \par\vspace{5pt}
+
+% personal projects
 
 {\large\bfseries Projets Personnels}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-\underline{\bfseries Zappy -- Serveur TCP multi-clients en C (Epitech)}
+\underline{\bfseries Zappy -- Serveur TCP multi-clients en C}
 \par
 \begin{adjustwidth}{5pt}{0pt}
-    Conception et codage seul d'un serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), avec gestion des clients par liste chaînée de connexions. \\
-    Buffer borné par client et mise en quarantaine temporaire des clients qui le saturent, pour éviter tout épuisement mémoire. \\
-    Aucune erreur ni fuite mémoire sous Valgrind (y compris à l'arrêt par SIGINT) ; tests unitaires et fonctionnels.
+    Serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), codé seul : buffer borné par client et mise en quarantaine des clients qui le saturent ; aucune erreur ni fuite sous Valgrind ; tests unitaires et fonctionnels.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+\underline{\bfseries Sledge -- Moteur de migration, synchronisation et orchestration multi-cloud}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Outil générique de migration multi-cloud gérant des structures de données complexes et des bases de données ; plateforme backend en Go pour des flux de données à haut volume, avec une couche d'abstraction cloud ({\ttfamily provicol}) supportant AWS S3 et GCP, et API Docker pour orchestrer des conteneurs concurrents.
+\end{adjustwidth}
+
+\par\vspace{8pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/zzzcript}{ZZZcript} -- Langage fonctionnel statiquement typé}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Lexer, parser et interpréteur écrits from scratch en {\bfseries Go} ; analyse de l'AST avant exécution (signatures de fonctions déclarées, cohérence des types, coercitions implicites contrôlées) et {\bfseries pattern matching} sur les arguments (comparaisons, décomposition de chaînes).
 \end{adjustwidth}
 
 \par\vspace{8pt}
@@ -109,32 +139,12 @@ Contributeur open-source (plus de 10 000 lignes de code sur des packages critiqu
 \underline{\bfseries \href{https://github.com/paulogarithm/cclass}{cclass} -- Moteur de mutation mémoire à l'exécution}
 \par
 \begin{adjustwidth}{5pt}{0pt}
-    Framework en C pur modifiant dynamiquement des instructions assembleur compilées directement en mémoire, pour contourner le surcoût du dispatch par vtable. \\
-    Appels système {\bfseries \texttt{mmap}} avec des flags de protection précis et règles d'alignement mémoire strictes pour garantir la stabilité sur les cibles d'exécution matérielles.
+    Framework en C pur réécrivant à l'exécution des instructions assembleur en mémoire ({\bfseries \texttt{mmap}}, flags de protection, alignement strict) pour contourner le surcoût du dispatch par vtable.
 \end{adjustwidth}
 
 \par\vspace{8pt}
 
-\underline{\bfseries Plazza -- Simulation de pizzerias concurrentes (Epitech)}
-\par
-\begin{adjustwidth}{5pt}{0pt}
-    Simulation en C++ de pizzerias concurrentes reposant sur des threads et des thread pools pour la préparation des commandes.
-\end{adjustwidth}
-\par
-{\bfseries Compétences :} C++, multithreading, thread pools
-
-\par\vspace{8pt}
-
-\underline{\bfseries \href{https://github.com/paulogarithm/blorox}{BloRox} -- Moteur 3D temps réel en C++}
-\par
-\begin{adjustwidth}{5pt}{0pt}
-	Architecture ECS orientée données: {\bfseries 100k entités animées}, perfs de $\sim$6 ms de moteur et $\sim$6 ms de rendu par image. \\
-	Alignement mémoire et extensions SIMD du processeur pour la vectorisation ; migration prévue vers {\ttfamily std::simd} (C++26). \\
-	Prototypage d'une sérialisation réseau par réflexion statique C++26 (compilateur expérimental).
-\end{adjustwidth}
-\par
-{\bfseries Compétences :} C++23/26, ECS, alignement mémoire, SIMD, optimisation de performance, conception de moteur
-\par\vspace{8pt}
+% education
 
 {\large\bfseries Formation}
 \par\vspace{-8pt}
