@@ -11,18 +11,14 @@
 \setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
 \setlength{\parindent}{0pt}
 
-% actual document shit
-
 \begin{document}
 
 \begin{center}
 	{\huge\bfseries Paul Parisot}
-	\\[9pt]
-	{\Large Ingénieur Logiciel - Backend, Cloud \& Finance}
+	\\[4pt]
+	{\Large Ingénieur Logiciel - C++, Java \& Finance}
 	\\
 \end{center}
-
-% section for contact
 
 \par\vspace{-5pt}
 \rule{\linewidth}{0.4pt}
@@ -39,38 +35,32 @@
 \rule{\linewidth}{0.4pt}
 \par\vspace{7pt}
 
-% section for the about us
-
 {\large\bfseries À propos}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-Ingénieur logiciel avec de solides bases en Go, Python et C/C++, orienté backend et cloud (Docker, Kubernetes, CI/CD), avec un intérêt marqué pour la {\bfseries finance}.
+Ingénieur logiciel orienté systèmes, spécialisé en C/C++ (optimisation de performance, programmation réseau, Linux) et Java, avec un intérêt marqué pour la {\bfseries finance de marché} et les systèmes de trading.
 \\
-Expérience de développement dans des environnements exigeants : contributions open-source sous revue de code et CI/CD stricte (plus de 10 000 lignes de code), démo présentée au CES 2024, enseignement auprès de plus de 400 étudiants.
+Formé à la comptabilité, à l'économie managériale et aux mathématiques à McGill University (Montréal).
 \\
-Formé à la comptabilité, à l'économie managériale et aux mathématiques à McGill University (Montréal), et pratique professionnelle de l'anglais (C1). En préparation de l'agrégation d'informatique.
+Contributeur open-source (plus de 10 000 lignes de code sur des packages critiques). En préparation de l'agrégation d'informatique {\bfseries (algorithmique des graphes, complexité, automates)}.
 \par\vspace{5pt}
-
-% section for skills
 
 {\large\bfseries Compétences}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-\hspace*{5pt}{\bfseries Maîtrise}: Golang, Python, C/C++, Lua(u), SQL (PostgreSQL), Shell, Haskell, OCaml, Assembleur
+\hspace*{5pt}{\bfseries Maîtrise}: C/C++, Java, Golang, Python, SQL (PostgreSQL), Lua, Shell
 \\
-\hspace*{5pt}{\bfseries Notions}: Java, AWS (S3)
+\hspace*{5pt}{\bfseries Bonne connaissance}: Assembleur, Haskell, OCaml
 \\
-\hspace*{5pt}{\bfseries Cloud \& DevOps}: GCP, Docker, Kubernetes, Traefik, CI/CD, Git, Environnement Linux
+\hspace*{5pt}{\bfseries Outils}: gdb, Ghidra, Valgrind, Git, Docker, Kubernetes, CI/CD, Environnement Linux
 \\
 \hspace*{5pt}{\bfseries Langues}: Français, Anglais (C1, professionnel)
 
 \par\vspace{5pt}
-
-% section for the professional experience
 
 {\large\bfseries Expérience Professionnelle}
 \par\vspace{-8pt}
@@ -79,7 +69,7 @@ Formé à la comptabilité, à l'économie managériale et aux mathématiques à
 
 {\bfseries Gno.land - Ingénieur Logiciel Junior (Open-Source)}
 \begin{itemize}[noitemsep, topsep=0pt]
-	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts), incluant printf et une compatibilité avec l'EVM.
+	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts), dont une compatibilité EVM (traduction d'opcodes en instructions Go).
 	\item Détection et correction de {\bfseries 6 bugs critiques} causant des crashs runtime ; {\bfseries ~10k lignes de code} contribuées.
 	\item Rédaction de tests exhaustifs sous des politiques strictes de CI/CD et de revue de code.
 \end{itemize}
@@ -89,7 +79,7 @@ Formé à la comptabilité, à l'économie managériale et aux mathématiques à
 {\bfseries Faurecia / Forvia - Ingénieur Démo Logicielle}
 \begin{itemize}[noitemsep, topsep=0pt]
 	\item Conception d'un {\bfseries moteur de calcul d'itinéraire GPS} et d'une interface de recherche de POI, intégrés à une application démo présentée au {\bfseries CES 2024}.
-	\item Correction d'un ancien code C++ pour le faire communiquer avec les bons drivers matériels (LED) ; scripts Python de pilotage de hardware.
+	\item Correction d'un ancien code {\bfseries C++} pour le faire communiquer avec les bons drivers matériels (LED) ; scripts Python de pilotage de hardware.
 	\item Livraison de fonctionnalités prêtes pour la production {\bfseries en avance sur le planning}, salué pour la rapidité et la qualité du code.
 \end{itemize}
 
@@ -103,33 +93,32 @@ Formé à la comptabilité, à l'économie managériale et aux mathématiques à
 
 \par\vspace{5pt}
 
-% personal projects
-
 {\large\bfseries Projets Personnels}
 \par\vspace{-8pt}
 \rule{\linewidth}{0.4pt}
 \par\vspace{5pt}
 
-\underline{\bfseries Sledge -- Moteur de migration, synchronisation et orchestration multi-cloud}
+\underline{\bfseries \href{https://github.com/paulogarithm/cclass}{cclass} -- Moteur de mutation mémoire à l'exécution}
 \par
 \begin{adjustwidth}{5pt}{0pt}
-    Développement et finalisation d'un outil générique de migration multi-cloud gérant des structures de données complexes et des interactions avec des bases de données. \\
-    Architecture et livraison d'une plateforme backend complète en Go, optimisée pour des opérations de flux de données à haut volume, via une couche d'abstraction cloud personnalisée ({\ttfamily provicol}) supportant AWS S3 et GCP. \\
-    Utilisation de l'API Docker à l'exécution pour créer et orchestrer dynamiquement des conteneurs d'environnements concurrents.
+    Framework en C pur modifiant dynamiquement des instructions assembleur compilées directement en mémoire. \\
+    Utilisation d'appels système {\bfseries \texttt{mmap}} avec des flags de protection précis pour contourner le surcoût du dispatch par vtable. \\
+    Application de règles d'alignement mémoire strictes pour garantir une stabilité absolue sur les cibles d'exécution matérielles.
 \end{adjustwidth}
 \par
-{\bfseries Compétences :} Go, API Docker, Python, SQL, intégrité des données, cloud computing, automatisation système
+{\bfseries Compétences :} C, systèmes Linux, assembleur x86, mmap, sûreté mémoire, débogage bas niveau
 
 \par\vspace{8pt}
 
-\underline{\bfseries Area -- Plateforme d'automatisation de services (clone d'IFTTT)}
+\underline{\bfseries \href{https://github.com/paulogarithm/blorox}{BloRox} -- Moteur 3D temps réel en C++}
 \par
 \begin{adjustwidth}{5pt}{0pt}
-    Projet d'équipe : conception et développement seul du backend en Go avec PostgreSQL, en architecture microservices (services en Go et Python), derrière un proxy Traefik. \\
-    Intégration d'une quinzaine de services tiers via OAuth, webhooks et requêtes HTTP, y compris des adaptateurs à base de polling planifié (cron) pour les services ne pouvant pas émettre de webhooks.
+	Architecture ECS orientée données: {\bfseries 100k entités animées}, perfs de $\sim$6 ms de moteur et $\sim$6 ms de rendu par image. \\
+	Alignement mémoire et extensions SIMD du processeur pour la vectorisation ; migration prévue vers {\ttfamily std::simd} (C++26). \\
+	Prototypage d'une sérialisation réseau par réflexion statique C++26 (compilateur expérimental).
 \end{adjustwidth}
 \par
-{\bfseries Compétences :} Go, Python, PostgreSQL, microservices, Traefik, OAuth, webhooks, intégration d'API
+{\bfseries Compétences :} C++23/26, ECS, alignement mémoire, SIMD, optimisation de performance, conception de moteur
 
 \par\vspace{8pt}
 
@@ -138,10 +127,21 @@ Formé à la comptabilité, à l'économie managériale et aux mathématiques à
 \begin{adjustwidth}{5pt}{0pt}
     Serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), codé seul : buffer borné par client et mise en quarantaine des clients qui le saturent ; aucune erreur ni fuite sous Valgrind ; tests unitaires et fonctionnels.
 \end{adjustwidth}
+\par
+{\bfseries Compétences :} C, sockets TCP, select, gestion mémoire, Valgrind, tests unitaires et fonctionnels
 
 \par\vspace{8pt}
 
-% education
+\underline{\bfseries Sledge -- Moteur de migration, synchronisation et orchestration multi-cloud}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Outil générique de migration multi-cloud gérant des structures de données complexes et des interactions avec des bases de données. \\
+    Plateforme backend complète en Go, optimisée pour des flux de données à haut volume, via une couche d'abstraction cloud personnalisée ({\ttfamily provicol}) supportant AWS S3 et GCP.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} Go, Python, SQL, intégrité des données, cloud computing, automatisation système
+
+\par\vspace{8pt}
 
 {\large\bfseries Formation}
 \par\vspace{-8pt}
