@@ -1,0 +1,170 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.2cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\pagestyle{empty}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+	{\huge\bfseries Paul Parisot}
+	\\[4pt]
+	{\Large Ingénieur Logiciel - C++, Lua \& Systèmes Temps Réel}
+	\\
+\end{center}
+
+\par\vspace{-5pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-5pt}
+
+\begin{center}
+	Github: \href{https://github.com/paulogarithm}{paulogarithm}
+	\\
+	\href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+	\\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{7pt}
+
+{\large\bfseries À propos}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Ingénieur logiciel spécialisé en C/C++ et scripting embarqué (Lua, Python), avec un intérêt pour les {\bfseries systèmes temps réel, le contrôle de systèmes et l'automatisation}. Attentif à la fiabilité du code : tests, Valgrind, CI/CD.
+\\
+Expérience concrète d'intégration Lua dans des moteurs de jeu C++ et des serveurs réseau, et développement de modules Luau (génération procédurale, algorithmes) sur Roblox Studio.
+\\
+Un an d'études à Montréal (McGill University, management) et pratique professionnelle de l'anglais (C1). En préparation de l'agrégation d'informatique.
+\par\vspace{5pt}
+
+{\large\bfseries Compétences}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Maîtrise}: C/C++, Lua/Luau, Python, Golang, Assembleur, Shell, SQL
+\\
+\hspace*{5pt}{\bfseries Scripting \& Embarqué}: intégration Lua dans C/C++, modules Luau (algorithmes, génération procédurale), Arduino (notions)
+\\
+\hspace*{5pt}{\bfseries Outils}: gdb, Valgrind, Ghidra, Git, Docker, CI/CD, Environnement Linux
+\\
+\hspace*{5pt}{\bfseries Langues}: Français, Anglais (C1, compétences professionnelles)
+
+\par\vspace{5pt}
+
+{\large\bfseries Expérience Professionnelle}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Ingénieur Logiciel Junior (Open-Source)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts), dont une compatibilité EVM (traduction d'opcodes en instructions Go).
+	\item Détection et correction de {\bfseries 6 bugs critiques} causant des crashs runtime ; {\bfseries ~10k lignes de code} contribuées.
+	\item Rédaction de tests exhaustifs sous des politiques strictes de CI/CD et de revue de code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Ingénieur Démo Logicielle}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Correction d'un ancien code {\bfseries C++} pour le faire communiquer avec les bons drivers matériels (LED) ; scripts Python de pilotage de hardware.
+	\item Conception d'un {\bfseries moteur de calcul d'itinéraire GPS} et d'une interface de recherche de POI, intégrés à une application démo présentée au {\bfseries CES 2024}.
+	\item Livraison de fonctionnalités prêtes pour la production {\bfseries en avance sur le planning}, salué pour la rapidité et la qualité du code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Assistant Technique \& Formateur}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Enseignement à {\bfseries plus de 400 étudiants} en C, C++, asm et Haskell ; correction et évaluation des rendus.
+	\item Création de {\bfseries contenus pédagogiques interactifs} (quiz, cours inversés, tutoriels).
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\large\bfseries Projets Personnels}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/blorox}{BloRox} -- Moteur 3D temps réel en C++ avec scripting Lua}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Architecture ECS orientée données : {\bfseries 100k entités animées}, $\sim$6 ms de moteur et $\sim$6 ms de rendu par image. \\
+	{\bfseries Intégration d'un moteur de script Lua} pour le comportement des entités et la logique de jeu, avec binding C++/Lua.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C++23/26, ECS, Lua, binding C++/Lua, alignement mémoire, SIMD, optimisation de performance
+
+\par\vspace{8pt}
+
+\underline{\bfseries Zappy -- Serveur TCP multi-clients en C avec intégration Lua}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), avec {\bfseries intégration d'un interpréteur Lua en C} pour la personnalisation du comportement des entités. \\
+    Buffer borné par client et mise en quarantaine des clients qui le saturent ; aucune erreur ni fuite sous Valgrind.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C, sockets TCP, select, Lua (intégration C/Lua), gestion mémoire, Valgrind
+
+\par\vspace{8pt}
+
+\underline{\bfseries Modules Luau (Roblox Studio) -- Algorithmes et génération procédurale}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Développement de {\bfseries modules Luau} pour Roblox Studio : {\bfseries génération aléatoire d'arbres et de maisons} (algorithmes procéduraux), {\bfseries décodeur PNG} en Luau. \\
+    Conception de systèmes de jeu avec typage progressif et optimisation des performances.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} Luau, algorithmes procéduraux, typage, optimisation, Roblox Studio
+
+\par\vspace{8pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/cclass}{cclass} -- Moteur de mutation mémoire à l'exécution}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Framework en C pur modifiant dynamiquement des instructions assembleur compilées directement en mémoire, pour contourner le surcoût du dispatch par vtable. \\
+    Appels système {\bfseries \texttt{mmap}} avec des flags de protection précis et règles d'alignement mémoire strictes.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C, systèmes Linux, assembleur x86, mmap, sûreté mémoire
+
+\par\vspace{8pt}
+
+\underline{\bfseries Chiffrement -- Implémentations AES et RSA}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Implémentation from scratch des algorithmes {\bfseries AES et RSA} ({\ttfamily myAES}, {\ttfamily myRSA}), incluant un décodeur utilisant Lua pour l'analyse de flux.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C, cryptographie, AES, RSA, Lua
+
+\par\vspace{8pt}
+
+{\large\bfseries Formation}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Diplôme d'ingénieur en technologies de l'information (diplôme de niveau Master) \\
+Certification Niveau 7 - Expert en ingénierie logicielle
+
+\vspace{6pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificat en Management -- GPA : 3.57/4.0 \\
+Cours suivis : Comptabilité, Managerial Economics \& Analysis, Business, Mathématiques, Gestion de projet, Marketing
+
+\end{document}

@@ -1,0 +1,155 @@
+\documentclass[9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1.2cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\pagestyle{empty}
+
+\setlist[itemize]{label=\textbullet, noitemsep, topsep=0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{center}
+	{\huge\bfseries Paul Parisot}
+	\\[4pt]
+	{\Large Ingénieur Logiciel - C++ \& Systèmes Industriels}
+	\\
+\end{center}
+
+\par\vspace{-5pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{-5pt}
+
+\begin{center}
+	Github: \href{https://github.com/paulogarithm}{paulogarithm}
+	\\
+	\href{mailto:paul.parisot@epitech.eu}{paul.parisot@epitech.eu}
+	\\
+\end{center}
+
+\par\vspace{-10pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{7pt}
+
+{\large\bfseries À propos}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+Ingénieur logiciel avec de solides bases en C/C++, Python et SQL, orienté {\bfseries systèmes industriels, automatisation et intégrité des données}.
+\\
+Expérience de développement dans des environnements exigeants : correction de drivers matériels en C++, contributions open-source sous CI/CD stricte, et conception d'un moteur de calcul en C++.
+\\
+Formation complémentaire en management à McGill University (comptabilité, économie managériale), utile pour dialoguer avec les équipes de production. En préparation de l'agrégation d'informatique.
+\par\vspace{5pt}
+
+{\large\bfseries Compétences}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\hspace*{5pt}{\bfseries Maîtrise}: C/C++, Python, SQL (PostgreSQL), Golang, Shell
+\\
+\hspace*{5pt}{\bfseries Systèmes \& Données}: gestion mémoire, programmation réseau, intégrité des données, automatisation système, Linux
+\\
+\hspace*{5pt}{\bfseries Outils}: Git, Docker, Kubernetes, CI/CD, gdb, Valgrind
+\\
+\hspace*{5pt}{\bfseries Langues}: Français, Anglais (C1, compétences professionnelles)
+
+\par\vspace{5pt}
+
+{\large\bfseries Expérience Professionnelle}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Faurecia / Forvia - Ingénieur Démo Logicielle}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Correction d'un ancien code {\bfseries C++} pour le faire communiquer avec les bons drivers matériels (LED) ; scripts Python de pilotage de hardware.
+	\item Conception d'un {\bfseries moteur de calcul d'itinéraire GPS} et d'une interface de recherche de POI, intégrés à une application démo présentée au {\bfseries CES 2024}.
+	\item Livraison de fonctionnalités prêtes pour la production {\bfseries en avance sur le planning}.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Gno.land - Ingénieur Logiciel Junior (Open-Source)}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Développement de 6+ packages core en Gnolang (variante de Go pour smart contracts) ; correction de {\bfseries 6 bugs critiques} ; {\bfseries ~10k lignes de code} contribuées.
+	\item Rédaction de tests exhaustifs sous des politiques strictes de CI/CD et de revue de code.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\bfseries Epitech / IONIS - Assistant Technique \& Formateur}
+\begin{itemize}[noitemsep, topsep=0pt]
+	\item Enseignement à {\bfseries plus de 400 étudiants} en C, C++, asm et Haskell ; correction et évaluation des rendus.
+\end{itemize}
+
+\par\vspace{5pt}
+
+{\large\bfseries Projets Personnels}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/blorox}{BloRox} -- Moteur 3D temps réel en C++}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+	Architecture ECS orientée données : {\bfseries 100k entités animées}, $\sim$6 ms de moteur et $\sim$6 ms de rendu par image ; alignement mémoire et extensions SIMD.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C++23/26, ECS, optimisation de performance, SIMD
+
+\par\vspace{8pt}
+
+\underline{\bfseries Sledge -- Moteur de migration, synchronisation et orchestration multi-cloud}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Outil générique de migration multi-cloud gérant des structures de données complexes et des interactions avec des bases de données. \\
+    Plateforme backend complète en Go, optimisée pour des flux de données à haut volume, via une couche d'abstraction cloud personnalisée ({\ttfamily provicol}) supportant AWS S3 et GCP.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} Go, API Docker, Python, SQL, intégrité des données, automatisation système
+
+\par\vspace{8pt}
+
+\underline{\bfseries Zappy -- Serveur TCP multi-clients en C}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Serveur TCP mono-thread à boucle événementielle ({\bfseries \texttt{select}}), codé seul : buffer borné par client et mise en quarantaine des clients qui le saturent ; aucune erreur ni fuite sous Valgrind.
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C, sockets TCP, select, gestion mémoire, Valgrind
+
+\par\vspace{8pt}
+
+\underline{\bfseries \href{https://github.com/paulogarithm/cclass}{cclass} -- Moteur de mutation mémoire à l'exécution}
+\par
+\begin{adjustwidth}{5pt}{0pt}
+    Framework en C pur réécrivant à l'exécution des instructions assembleur en mémoire ({\bfseries \texttt{mmap}}, flags de protection, alignement strict).
+\end{adjustwidth}
+\par
+{\bfseries Compétences :} C, systèmes Linux, assembleur x86, mmap, sûreté mémoire
+
+\par\vspace{8pt}
+
+{\large\bfseries Formation}
+\par\vspace{-8pt}
+\rule{\linewidth}{0.4pt}
+\par\vspace{5pt}
+
+{\bfseries Epitech, Paris} \hfill 2022 -- 2027 \\
+Diplôme d'ingénieur en technologies de l'information (diplôme de niveau Master) \\
+Certification Niveau 7 - Expert en ingénierie logicielle
+
+\vspace{6pt}
+
+{\bfseries McGill University, Montréal} \hfill 2025 -- 2026 \\
+Certificat en Management -- GPA : 3.57/4.0 \\
+Cours suivis : Comptabilité, Managerial Economics \& Analysis, Business, Mathématiques, Gestion de projet, Marketing
+
+\end{document}
