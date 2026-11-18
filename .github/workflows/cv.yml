@@ -21,6 +21,7 @@ jobs:
 
       - name: setup & cleaning
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           mkdir -p cv/qr
           rm -rf cv/*.pdf cv/qr/*.png
 
