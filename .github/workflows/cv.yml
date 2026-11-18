@@ -10,17 +10,14 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
     steps:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: install dependancies
-        run: |
-          sudo apt-get update -y;
-          sudo apt-get install -y --no-install-recommends \
-            texlive-latex-recommended texlive-latex-base texlive-fonts-recommended \
-            texlive-latex-extra lmodern \
-            qrencode
+      - name: install qrencode
+        run: apt-get update -y && apt-get install -y --no-install-recommends qrencode
 
       - name: setup & cleaning
         run: |
